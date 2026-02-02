@@ -1,0 +1,290 @@
+﻿Row,phenotype_category,phenotype_name,clinical_subcategory,code,description,code_system,Rank
+1245,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - respiratory devices,ZV44000,[V]Has tracheostomy,Read codes v2,1
+2739,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - devices,ZV44000,[V]Has tracheostomy,Read codes v2,2
+1527,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,SP08b00,De novo glomerulonephritis,Read codes v2,1
+47,Chronic Paediatric Condition,Transplant,Transplant,SP08b00,De novo glomerulonephritis,Read codes v2,2
+36,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - congenital renal disorders,PC6z.00,Hypospadias or epispadias NOS,Read codes v2,2
+458,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - congenital urogenital disorders,PC6z.00,Hypospadias or epispadias NOS,Read codes v2,1
+34,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - congenital renal disorders,PC6..00,Hypospadias and epispadias,Read codes v2,2
+448,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - congenital urogenital disorders,PC6..00,Hypospadias and epispadias,Read codes v2,1
+567,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - congenital neurological condition,P230.11,Hydrocephauls with anomaly of aqueduct of Sylvius,Read codes v2,1
+2331,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,P230.11,Hydrocephauls with anomaly of aqueduct of Sylvius,Read codes v2,2
+66,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - congenital cardiac defects,NA,NA,Read codes v2,Invalid code - remove
+773,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,NA,NA,Read codes v2,Invalid code - remove
+328,Chronic Paediatric Condition,Neurodevelopmental and behavioural,Neurodevelopmental and behavioural,NA,NA,Read codes v2,Invalid code - remove
+268,Chronic Paediatric Condition,Non-malignant haematological,Non-malignant haematological,N068.00,Haemophilic arthropathy,Read codes v2,1
+346,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N068.00,Haemophilic arthropathy,Read codes v2,2
+345,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N067.00,Ochronotic arthropathy,Read codes v2,1
+404,Chronic Paediatric Condition,Metabolic,Metabolic,N067.00,Ochronotic arthropathy,Read codes v2,2
+771,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,N045300,Juvenile arthritis in Crohn's disease,Read codes v2,2
+332,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N045300,Juvenile arthritis in Crohn's disease,Read codes v2,1
+319,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N039.00,Beta-2 microglobulin arthropathy,Read codes v2,1
+403,Chronic Paediatric Condition,Metabolic,Metabolic,N039.00,Beta-2 microglobulin arthropathy,Read codes v2,2
+2293,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,N035.11,Charcot's arthropathy,Read codes v2,2
+317,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N035.11,Charcot's arthropathy,Read codes v2,1
+817,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,N034.00,Arthropathy associated with respiratory disorders,Read codes v2,2
+315,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N034.00,Arthropathy associated with respiratory disorders,Read codes v2,1
+267,Chronic Paediatric Condition,Non-malignant haematological,Non-malignant haematological,N032000,Arthropathy due to haemophilia,Read codes v2,2
+313,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N032000,Arthropathy due to haemophilia,Read codes v2,1
+770,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,N031200,Arthropathy in Whipple's disease,Read codes v2,2
+311,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N031200,Arthropathy in Whipple's disease,Read codes v2,1
+309,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N030212,Amyloid arthropathy,Read codes v2,1
+402,Chronic Paediatric Condition,Metabolic,Metabolic,N030212,Amyloid arthropathy,Read codes v2,2
+308,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N030211,Articular amyloid,Read codes v2,1
+401,Chronic Paediatric Condition,Metabolic,Metabolic,N030211,Articular amyloid,Read codes v2,2
+307,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N030200,Arthropathy in amyloidosis,Read codes v2,1
+400,Chronic Paediatric Condition,Metabolic,Metabolic,N030200,Arthropathy in amyloidosis,Read codes v2,2
+767,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,N014800,Arthropathy in Whipple's disease,Read codes v2,2
+299,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N014800,Arthropathy in Whipple's disease,Read codes v2,1
+2751,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,N000400,Systemic lupus erythematosus with pericarditis,Read codes v2,1
+261,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,N000400,Systemic lupus erythematosus with pericarditis,Read codes v2,2
+1484,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,Kyu1C00,[X]Renal tubulo-interstitial disorders in transplant rejection,Read codes v2,1
+33,Chronic Paediatric Condition,Transplant,Transplant,Kyu1C00,[X]Renal tubulo-interstitial disorders in transplant rejection,Read codes v2,2
+1278,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K199.00,Amyloid disease of the urethra,Read codes v2,1
+397,Chronic Paediatric Condition,Metabolic,Metabolic,K199.00,Amyloid disease of the urethra,Read codes v2,2
+1238,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K168.00,Amyloid of bladder,Read codes v2,1
+396,Chronic Paediatric Condition,Metabolic,Metabolic,K168.00,Amyloid of bladder,Read codes v2,2
+1100,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K0J0.00,Renal involvement in scleroderma,Read codes v2,1
+231,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,K0J0.00,Renal involvement in scleroderma,Read codes v2,2
+1085,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K0B5.00,Renal tubulo-interstitial disorders in transplant rejection,Read codes v2,1
+32,Chronic Paediatric Condition,Transplant,Transplant,K0B5.00,Renal tubulo-interstitial disorders in transplant rejection,Read codes v2,2
+1084,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K0B4000,Renal tubulo-interstitial disorder in systemic lupus erythematosus,Read codes v2,1
+229,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,K0B4000,Renal tubulo-interstitial disorder in systemic lupus erythematosus,Read codes v2,2
+938,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K01x411,Lupus nephritis,Read codes v2,1
+227,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,K01x411,Lupus nephritis,Read codes v2,2
+937,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K01x400,Nephrotic syndrome in systemic lupus erythematosus,Read codes v2,1
+226,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,K01x400,Nephrotic syndrome in systemic lupus erythematosus,Read codes v2,2
+936,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K01x300,Nephrotic syndrome in polyarteritis nodosa,Read codes v2,1
+225,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,K01x300,Nephrotic syndrome in polyarteritis nodosa,Read codes v2,2
+933,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,K01x000,Nephrotic syndrome in amyloidosis,Read codes v2,1
+394,Chronic Paediatric Condition,Metabolic,Metabolic,K01x000,Nephrotic syndrome in amyloidosis,Read codes v2,2
+2054,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,I859,Oesophageal varices without bleeding,ICD10 codes,2
+5,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,I859,Oesophageal varices without bleeding,ICD10 codes,1
+2052,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,I820,Budd-Chiari syndrome,ICD10 codes,2
+4,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,I820,Budd-Chiari syndrome,ICD10 codes,1
+2051,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,I81,Portal vein thrombosis,ICD10 codes,2
+3,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,I81,Portal vein thrombosis,ICD10 codes,1
+793,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H58y600,Interstitial lung disease due to collagen vascular disease,Read codes v2,1
+223,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,H58y600,Interstitial lung disease due to collagen vascular disease,Read codes v2,2
+779,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H57y400,Lung disease with systemic lupus erythematosus,Read codes v2,1
+222,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,H57y400,Lung disease with systemic lupus erythematosus,Read codes v2,2
+778,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H57y300,Lung disease with Sjogren's disease,Read codes v2,1
+221,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,H57y300,Lung disease with Sjogren's disease,Read codes v2,2
+777,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H572.00,Lung disease with systemic sclerosis,Read codes v2,1
+218,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,H572.00,Lung disease with systemic sclerosis,Read codes v2,2
+38,Chronic Paediatric Condition,Asthma,Asthma,H47y000,Detergent asthma,Read codes v2,1
+741,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H47y000,Detergent asthma,Read codes v2,2
+7,Chronic Paediatric Condition,Asthma,Asthma,H312011,Chronic wheezy bronchitis,Read codes v2,1
+644,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H312011,Chronic wheezy bronchitis,Read codes v2,2
+6,Chronic Paediatric Condition,Asthma,Asthma,H312000,Chronic asthmatic bronchitis,Read codes v2,1
+643,Chronic Paediatric Condition,Other respiratory (excluding asthma and cystic fibrosis),Other respiratory - non-congenital respiratory conditions,H312000,Chronic asthmatic bronchitis,Read codes v2,2
+890,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,G752112,Anti GBM disease - Antiglomerular basement membrane disease,Read codes v2,1
+200,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,G752112,Anti GBM disease - Antiglomerular basement membrane disease,Read codes v2,2
+889,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,G752111,Antiglomerular basement membrane disease,Read codes v2,1
+199,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,G752111,Antiglomerular basement membrane disease,Read codes v2,2
+888,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,G752100,Goodpasture's disease,Read codes v2,1
+197,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,G752100,Goodpasture's disease,Read codes v2,2
+2244,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,G674000,Cerebral amyloid angiopathy,Read codes v2,1
+390,Chronic Paediatric Condition,Metabolic,Metabolic,G674000,Cerebral amyloid angiopathy,Read codes v2,2
+2435,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,G558100,Cardiomyopathy in myotonic dystrophy,Read codes v2,1
+2143,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,G558100,Cardiomyopathy in myotonic dystrophy,Read codes v2,2
+2434,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,G558000,Cardiomyopathy in Friedreich's ataxia,Read codes v2,1
+2142,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,G558000,Cardiomyopathy in Friedreich's ataxia,Read codes v2,2
+2427,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,G557400,Mucopolysaccharidosis cardiomyopathy,Read codes v2,1
+389,Chronic Paediatric Condition,Metabolic,Metabolic,G557400,Mucopolysaccharidosis cardiomyopathy,Read codes v2,2
+2426,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,G557200,Cardiac glycogenosis,Read codes v2,1
+388,Chronic Paediatric Condition,Metabolic,Metabolic,G557200,Cardiac glycogenosis,Read codes v2,2
+2424,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,G557011,Cardiac amyloidosis,Read codes v2,1
+387,Chronic Paediatric Condition,Metabolic,Metabolic,G557011,Cardiac amyloidosis,Read codes v2,2
+2423,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,G557000,Amyloid heart disease,Read codes v2,1
+386,Chronic Paediatric Condition,Metabolic,Metabolic,G557000,Amyloid heart disease,Read codes v2,2
+2120,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,Fyu8800,[X]Myopathy in metabolic diseases classified elsewhere,Read codes v2,1
+385,Chronic Paediatric Condition,Metabolic,Metabolic,Fyu8800,[X]Myopathy in metabolic diseases classified elsewhere,Read codes v2,2
+2109,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,Fyu7700,[X]Polyneuropathy in systemic connective tissue disorders classified elsewhere,Read codes v2,1
+190,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,Fyu7700,[X]Polyneuropathy in systemic connective tissue disorders classified elsewhere,Read codes v2,2
+2046,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F398.00,Myopathy in metabolic diseases,Read codes v2,1
+378,Chronic Paediatric Condition,Metabolic,Metabolic,F398.00,Myopathy in metabolic diseases,Read codes v2,2
+2043,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F396700,Myopathy due to Sjogren's disease,Read codes v2,1
+188,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F396700,Myopathy due to Sjogren's disease,Read codes v2,2
+2042,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F396600,Myopathy due to scleroderma,Read codes v2,1
+187,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F396600,Myopathy due to scleroderma,Read codes v2,2
+2041,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F396500,Myopathy due to sarcoidosis,Read codes v2,1
+186,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F396500,Myopathy due to sarcoidosis,Read codes v2,2
+2039,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F396300,Myopathy due to polyarteritis nodosa,Read codes v2,1
+185,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F396300,Myopathy due to polyarteritis nodosa,Read codes v2,2
+2038,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F396100,Myopathy due to disseminated lupus erythematosus,Read codes v2,1
+184,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F396100,Myopathy due to disseminated lupus erythematosus,Read codes v2,2
+2037,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F396000,Myopathy due to amyloid,Read codes v2,1
+377,Chronic Paediatric Condition,Metabolic,Metabolic,F396000,Myopathy due to amyloid,Read codes v2,2
+2032,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F395200,Myopathy due to hypopituitarism,Read codes v2,1
+175,Chronic Paediatric Condition,Other endocrine (excluding diabetes),Other endocrine,F395200,Myopathy due to hypopituitarism,Read codes v2,2
+2030,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F395000,Myopathy due to Addison's disease,Read codes v2,1
+174,Chronic Paediatric Condition,Other endocrine (excluding diabetes),Other endocrine,F395000,Myopathy due to Addison's disease,Read codes v2,2
+2078,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,F391B00,Cardiomyopathy in Duchenne muscular dystrophy,Read codes v2,1
+2009,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F391B00,Cardiomyopathy in Duchenne muscular dystrophy,Read codes v2,2
+2077,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,F391900,Hauptmann-Thannhauser muscular dystrophy,Read codes v2,2
+2007,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F391900,Hauptmann-Thannhauser muscular dystrophy,Read codes v2,1
+1958,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F374A00,Polyneuropathy in uraemia,Read codes v2,1
+887,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,F374A00,Polyneuropathy in uraemia,Read codes v2,2
+1957,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F374900,Polyneuropathy in sarcoidosis,Read codes v2,1
+183,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F374900,Polyneuropathy in sarcoidosis,Read codes v2,2
+1956,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F374800,Polyneuropathy in porphyria,Read codes v2,1
+376,Chronic Paediatric Condition,Metabolic,Metabolic,F374800,Polyneuropathy in porphyria,Read codes v2,2
+1954,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F374000,Polyneuropathy in amyloidosis,Read codes v2,1
+375,Chronic Paediatric Condition,Metabolic,Metabolic,F374000,Polyneuropathy in amyloidosis,Read codes v2,2
+1945,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F371z00,Polyneuropathy in collagen vascular disease NOS,Read codes v2,1
+182,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F371z00,Polyneuropathy in collagen vascular disease NOS,Read codes v2,2
+1943,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F371100,Polyneuropathy in polyarteritis nodosa,Read codes v2,1
+181,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F371100,Polyneuropathy in polyarteritis nodosa,Read codes v2,2
+1941,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F371000,Polyneuropathy in disseminated lupus erythematosus,Read codes v2,1
+180,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F371000,Polyneuropathy in disseminated lupus erythematosus,Read codes v2,2
+1940,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F371.00,Polyneuropathy in collagen vascular disease,Read codes v2,1
+179,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F371.00,Polyneuropathy in collagen vascular disease,Read codes v2,2
+1891,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F326300,Multiple cranial nerve palsies in sarcoidosis,Read codes v2,1
+178,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,F326300,Multiple cranial nerve palsies in sarcoidosis,Read codes v2,2
+1602,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F103100,Cerebral degeneration in mucopolysaccharidoses,Read codes v2,1
+374,Chronic Paediatric Condition,Metabolic,Metabolic,F103100,Cerebral degeneration in mucopolysaccharidoses,Read codes v2,2
+1599,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F102100,Cerebral degeneration in Niemann-Pick disease,Read codes v2,1
+372,Chronic Paediatric Condition,Metabolic,Metabolic,F102100,Cerebral degeneration in Niemann-Pick disease,Read codes v2,2
+1598,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,F102000,Cerebral degeneration in Gaucher's disease,Read codes v2,1
+371,Chronic Paediatric Condition,Metabolic,Metabolic,F102000,Cerebral degeneration in Gaucher's disease,Read codes v2,2
+65,Chronic Paediatric Condition,Non-malignant haematological,Non-malignant haematological,E744,Disorders of pyruvate metabolism and gluconeogenesis,ICD10 codes,2
+23,Chronic Paediatric Condition,Metabolic,Metabolic,E744,Disorders of pyruvate metabolism and gluconeogenesis,ICD10 codes,1
+879,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C373J00,Beta-2 microglobulin amyloidosis,Read codes v2,1
+293,Chronic Paediatric Condition,Metabolic,Metabolic,C373J00,Beta-2 microglobulin amyloidosis,Read codes v2,2
+2075,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,C373G00,Senile cardiac amyloidosis,Read codes v2,1
+291,Chronic Paediatric Condition,Metabolic,Metabolic,C373G00,Senile cardiac amyloidosis,Read codes v2,2
+44,Chronic Paediatric Condition,Immunological,Immunological,C373C00,AL amyloidosis,Read codes v2,2
+284,Chronic Paediatric Condition,Metabolic,Metabolic,C373C00,AL amyloidosis,Read codes v2,1
+869,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C30A.11,Blue diaper syndrome,Read codes v2,2
+161,Chronic Paediatric Condition,Metabolic,Metabolic,C30A.11,Blue diaper syndrome,Read codes v2,1
+868,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C30A.00,Tryptophan malabsorption syndrome,Read codes v2,2
+160,Chronic Paediatric Condition,Metabolic,Metabolic,C30A.00,Tryptophan malabsorption syndrome,Read codes v2,1
+867,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C300811,Adolescent cystinosis,Read codes v2,2
+80,Chronic Paediatric Condition,Metabolic,Metabolic,C300811,Adolescent cystinosis,Read codes v2,1
+866,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C300800,Juvenile nephropathic cystinosis,Read codes v2,1
+79,Chronic Paediatric Condition,Metabolic,Metabolic,C300800,Juvenile nephropathic cystinosis,Read codes v2,2
+2074,Chronic Paediatric Condition,Cardiovascular,Cardiovascular - non-congenital cardiac disorders,C132200,Postinfarction panhypopituitarism,Read codes v2,2
+63,Chronic Paediatric Condition,Other endocrine (excluding diabetes),Other endocrine,C132200,Postinfarction panhypopituitarism,Read codes v2,1
+240,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,C10FR00,Type 2 diabetes mellitus with gastroparesis,Read codes v2,1
+262,Chronic Paediatric Condition,Diabetes,Diabetes,C10FR00,Type 2 diabetes mellitus with gastroparesis,Read codes v2,2
+865,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10FL11,Type II diabetes mellitus with persistent proteinuria,Read codes v2,1
+255,Chronic Paediatric Condition,Diabetes,Diabetes,C10FL11,Type II diabetes mellitus with persistent proteinuria,Read codes v2,2
+864,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10FL00,Type 2 diabetes mellitus with persistent proteinuria,Read codes v2,1
+254,Chronic Paediatric Condition,Diabetes,Diabetes,C10FL00,Type 2 diabetes mellitus with persistent proteinuria,Read codes v2,2
+168,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C10FG11,Type II diabetes mellitus with arthropathy,Read codes v2,1
+247,Chronic Paediatric Condition,Diabetes,Diabetes,C10FG11,Type II diabetes mellitus with arthropathy,Read codes v2,2
+863,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10FC11,Type II diabetes mellitus with nephropathy,Read codes v2,1
+240,Chronic Paediatric Condition,Diabetes,Diabetes,C10FC11,Type II diabetes mellitus with nephropathy,Read codes v2,2
+862,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10FC00,Type 2 diabetes mellitus with nephropathy,Read codes v2,1
+239,Chronic Paediatric Condition,Diabetes,Diabetes,C10FC00,Type 2 diabetes mellitus with nephropathy,Read codes v2,2
+1541,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10FB11,Type II diabetes mellitus with polyneuropathy,Read codes v2,1
+238,Chronic Paediatric Condition,Diabetes,Diabetes,C10FB11,Type II diabetes mellitus with polyneuropathy,Read codes v2,2
+1540,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10FB00,Type 2 diabetes mellitus with polyneuropathy,Read codes v2,1
+237,Chronic Paediatric Condition,Diabetes,Diabetes,C10FB00,Type 2 diabetes mellitus with polyneuropathy,Read codes v2,2
+1539,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10FA11,Type II diabetes mellitus with mononeuropathy,Read codes v2,1
+236,Chronic Paediatric Condition,Diabetes,Diabetes,C10FA11,Type II diabetes mellitus with mononeuropathy,Read codes v2,2
+1538,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10FA00,Type 2 diabetes mellitus with mononeuropathy,Read codes v2,1
+235,Chronic Paediatric Condition,Diabetes,Diabetes,C10FA00,Type 2 diabetes mellitus with mononeuropathy,Read codes v2,2
+1537,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10F211,Type II diabetes mellitus with neurological complications,Read codes v2,1
+222,Chronic Paediatric Condition,Diabetes,Diabetes,C10F211,Type II diabetes mellitus with neurological complications,Read codes v2,2
+1536,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10F200,Type 2 diabetes mellitus with neurological complications,Read codes v2,1
+221,Chronic Paediatric Condition,Diabetes,Diabetes,C10F200,Type 2 diabetes mellitus with neurological complications,Read codes v2,2
+861,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10F011,Type II diabetes mellitus with renal complications,Read codes v2,1
+217,Chronic Paediatric Condition,Diabetes,Diabetes,C10F011,Type II diabetes mellitus with renal complications,Read codes v2,2
+860,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10F000,Type 2 diabetes mellitus with renal complications,Read codes v2,1
+216,Chronic Paediatric Condition,Diabetes,Diabetes,C10F000,Type 2 diabetes mellitus with renal complications,Read codes v2,2
+239,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,C10EQ11,Type I diabetes mellitus with gastroparesis,Read codes v2,1
+214,Chronic Paediatric Condition,Diabetes,Diabetes,C10EQ11,Type I diabetes mellitus with gastroparesis,Read codes v2,2
+238,Chronic Paediatric Condition,Gastrointestinal,Gastrointestinal - conditions,C10EQ00,Type 1 diabetes mellitus with gastroparesis,Read codes v2,1
+213,Chronic Paediatric Condition,Diabetes,Diabetes,C10EQ00,Type 1 diabetes mellitus with gastroparesis,Read codes v2,2
+164,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C10EJ00,Type 1 diabetes mellitus with neuropathic arthropathy,Read codes v2,1
+203,Chronic Paediatric Condition,Diabetes,Diabetes,C10EJ00,Type 1 diabetes mellitus with neuropathic arthropathy,Read codes v2,2
+161,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C10EH00,Type 1 diabetes mellitus with arthropathy,Read codes v2,1
+202,Chronic Paediatric Condition,Diabetes,Diabetes,C10EH00,Type 1 diabetes mellitus with arthropathy,Read codes v2,2
+859,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10ED12,Insulin dependent diabetes mellitus with nephropathy,Read codes v2,1
+196,Chronic Paediatric Condition,Diabetes,Diabetes,C10ED12,Insulin dependent diabetes mellitus with nephropathy,Read codes v2,2
+857,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10ED00,Type 1 diabetes mellitus with nephropathy,Read codes v2,1
+195,Chronic Paediatric Condition,Diabetes,Diabetes,C10ED00,Type 1 diabetes mellitus with nephropathy,Read codes v2,2
+1535,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10EC12,Insulin dependent diabetes mellitus with polyneuropathy,Read codes v2,1
+194,Chronic Paediatric Condition,Diabetes,Diabetes,C10EC12,Insulin dependent diabetes mellitus with polyneuropathy,Read codes v2,2
+1534,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10EC11,Type I diabetes mellitus with polyneuropathy,Read codes v2,1
+193,Chronic Paediatric Condition,Diabetes,Diabetes,C10EC11,Type I diabetes mellitus with polyneuropathy,Read codes v2,2
+1533,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10EC00,Type 1 diabetes mellitus with polyneuropathy,Read codes v2,1
+192,Chronic Paediatric Condition,Diabetes,Diabetes,C10EC00,Type 1 diabetes mellitus with polyneuropathy,Read codes v2,2
+1530,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10EB00,Type 1 diabetes mellitus with mononeuropathy,Read codes v2,1
+191,Chronic Paediatric Condition,Diabetes,Diabetes,C10EB00,Type 1 diabetes mellitus with mononeuropathy,Read codes v2,2
+1528,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C10E200,Type 1 diabetes mellitus with neurological complications,Read codes v2,1
+168,Chronic Paediatric Condition,Diabetes,Diabetes,C10E200,Type 1 diabetes mellitus with neurological complications,Read codes v2,2
+856,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10E012,Insulin-dependent diabetes mellitus with renal complications,Read codes v2,1
+162,Chronic Paediatric Condition,Diabetes,Diabetes,C10E012,Insulin-dependent diabetes mellitus with renal complications,Read codes v2,2
+855,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10E011,Type I diabetes mellitus with renal complications,Read codes v2,1
+161,Chronic Paediatric Condition,Diabetes,Diabetes,C10E011,Type I diabetes mellitus with renal complications,Read codes v2,2
+854,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C10E000,Type 1 diabetes mellitus with renal complications,Read codes v2,1
+160,Chronic Paediatric Condition,Diabetes,Diabetes,C10E000,Type 1 diabetes mellitus with renal complications,Read codes v2,2
+160,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C109G12,Type 2 diabetes mellitus with arthropathy,Read codes v2,1
+152,Chronic Paediatric Condition,Diabetes,Diabetes,C109G12,Type 2 diabetes mellitus with arthropathy,Read codes v2,2
+159,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C109G11,Type II diabetes mellitus with arthropathy,Read codes v2,1
+151,Chronic Paediatric Condition,Diabetes,Diabetes,C109G11,Type II diabetes mellitus with arthropathy,Read codes v2,2
+158,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C109G00,Non-insulin dependent diabetes mellitus with arthropathy,Read codes v2,1
+150,Chronic Paediatric Condition,Diabetes,Diabetes,C109G00,Non-insulin dependent diabetes mellitus with arthropathy,Read codes v2,2
+853,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C109C12,Type 2 diabetes mellitus with nephropathy,Read codes v2,1
+141,Chronic Paediatric Condition,Diabetes,Diabetes,C109C12,Type 2 diabetes mellitus with nephropathy,Read codes v2,2
+852,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C109C11,Type II diabetes mellitus with nephropathy,Read codes v2,1
+140,Chronic Paediatric Condition,Diabetes,Diabetes,C109C11,Type II diabetes mellitus with nephropathy,Read codes v2,2
+851,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C109C00,Non-insulin dependent diabetes mellitus with nephropathy,Read codes v2,1
+139,Chronic Paediatric Condition,Diabetes,Diabetes,C109C00,Non-insulin dependent diabetes mellitus with nephropathy,Read codes v2,2
+1527,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109B12,Type 2 diabetes mellitus with polyneuropathy,Read codes v2,1
+138,Chronic Paediatric Condition,Diabetes,Diabetes,C109B12,Type 2 diabetes mellitus with polyneuropathy,Read codes v2,2
+1526,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109B11,Type II diabetes mellitus with polyneuropathy,Read codes v2,1
+137,Chronic Paediatric Condition,Diabetes,Diabetes,C109B11,Type II diabetes mellitus with polyneuropathy,Read codes v2,2
+1525,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109B00,Non-insulin dependent diabetes mellitus with polyneuropathy,Read codes v2,1
+136,Chronic Paediatric Condition,Diabetes,Diabetes,C109B00,Non-insulin dependent diabetes mellitus with polyneuropathy,Read codes v2,2
+1523,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109A11,Type II diabetes mellitus with mononeuropathy,Read codes v2,1
+135,Chronic Paediatric Condition,Diabetes,Diabetes,C109A11,Type II diabetes mellitus with mononeuropathy,Read codes v2,2
+1522,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109A00,Non-insulin dependent diabetes mellitus with mononeuropathy,Read codes v2,1
+134,Chronic Paediatric Condition,Diabetes,Diabetes,C109A00,Non-insulin dependent diabetes mellitus with mononeuropathy,Read codes v2,2
+1521,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109212,Type 2 diabetes mellitus with neurological complications,Read codes v2,1
+116,Chronic Paediatric Condition,Diabetes,Diabetes,C109212,Type 2 diabetes mellitus with neurological complications,Read codes v2,2
+1520,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109211,Type II diabetes mellitus with neurological complications,Read codes v2,1
+115,Chronic Paediatric Condition,Diabetes,Diabetes,C109211,Type II diabetes mellitus with neurological complications,Read codes v2,2
+1519,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C109200,Non-insulin-dependent diabetes mellitus with neurological complications,Read codes v2,1
+114,Chronic Paediatric Condition,Diabetes,Diabetes,C109200,Non-insulin-dependent diabetes mellitus with neurological complications,Read codes v2,2
+850,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C109012,Type 2 diabetes mellitus with renal complications,Read codes v2,1
+107,Chronic Paediatric Condition,Diabetes,Diabetes,C109012,Type 2 diabetes mellitus with renal complications,Read codes v2,2
+849,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C109011,Type II diabetes mellitus with renal complications,Read codes v2,1
+106,Chronic Paediatric Condition,Diabetes,Diabetes,C109011,Type II diabetes mellitus with renal complications,Read codes v2,2
+848,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C109000,Non-insulin-dependent diabetes mellitus with renal complications,Read codes v2,1
+105,Chronic Paediatric Condition,Diabetes,Diabetes,C109000,Non-insulin-dependent diabetes mellitus with renal complications,Read codes v2,2
+157,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C108J12,Type 1 diabetes mellitus with neuropathic arthropathy,Read codes v2,1
+103,Chronic Paediatric Condition,Diabetes,Diabetes,C108J12,Type 1 diabetes mellitus with neuropathic arthropathy,Read codes v2,2
+156,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C108J11,Type I diabetes mellitus with neuropathic arthropathy,Read codes v2,1
+102,Chronic Paediatric Condition,Diabetes,Diabetes,C108J11,Type I diabetes mellitus with neuropathic arthropathy,Read codes v2,2
+155,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C108J00,Insulin dependent diabetes mellitus with neuropathic arthropathy,Read codes v2,1
+101,Chronic Paediatric Condition,Diabetes,Diabetes,C108J00,Insulin dependent diabetes mellitus with neuropathic arthropathy,Read codes v2,2
+153,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C108H11,Type I diabetes mellitus with arthropathy,Read codes v2,1
+100,Chronic Paediatric Condition,Diabetes,Diabetes,C108H11,Type I diabetes mellitus with arthropathy,Read codes v2,2
+152,Chronic Paediatric Condition,Rheumatological or musculoskeletal,Rheumatological or musculoskeletal,C108H00,Insulin dependent diabetes mellitus with arthropathy,Read codes v2,1
+99,Chronic Paediatric Condition,Diabetes,Diabetes,C108H00,Insulin dependent diabetes mellitus with arthropathy,Read codes v2,2
+846,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C108D11,Type I diabetes mellitus with nephropathy,Read codes v2,1
+91,Chronic Paediatric Condition,Diabetes,Diabetes,C108D11,Type I diabetes mellitus with nephropathy,Read codes v2,2
+845,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C108D00,Insulin dependent diabetes mellitus with nephropathy,Read codes v2,1
+90,Chronic Paediatric Condition,Diabetes,Diabetes,C108D00,Insulin dependent diabetes mellitus with nephropathy,Read codes v2,2
+1516,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C108C00,Insulin dependent diabetes mellitus with polyneuropathy,Read codes v2,1
+89,Chronic Paediatric Condition,Diabetes,Diabetes,C108C00,Insulin dependent diabetes mellitus with polyneuropathy,Read codes v2,2
+1514,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C108B11,Type I diabetes mellitus with mononeuropathy,Read codes v2,1
+88,Chronic Paediatric Condition,Diabetes,Diabetes,C108B11,Type I diabetes mellitus with mononeuropathy,Read codes v2,2
+1513,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C108B00,Insulin dependent diabetes mellitus with mononeuropathy,Read codes v2,1
+87,Chronic Paediatric Condition,Diabetes,Diabetes,C108B00,Insulin dependent diabetes mellitus with mononeuropathy,Read codes v2,2
+1512,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C108212,Type 1 diabetes mellitus with neurological complications,Read codes v2,1
+69,Chronic Paediatric Condition,Diabetes,Diabetes,C108212,Type 1 diabetes mellitus with neurological complications,Read codes v2,2
+1511,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,C108211,Type I diabetes mellitus with neurological complications,Read codes v2,1
+68,Chronic Paediatric Condition,Diabetes,Diabetes,C108211,Type I diabetes mellitus with neurological complications,Read codes v2,2
+844,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C108012,Type 1 diabetes mellitus with renal complications,Read codes v2,1
+61,Chronic Paediatric Condition,Diabetes,Diabetes,C108012,Type 1 diabetes mellitus with renal complications,Read codes v2,2
+843,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C108011,Type I diabetes mellitus with renal complications,Read codes v2,1
+60,Chronic Paediatric Condition,Diabetes,Diabetes,C108011,Type I diabetes mellitus with renal complications,Read codes v2,2
+842,Chronic Paediatric Condition,Renal and Genitourinary,Renal and Genitourinary - non-congenital renal and urogenital disorders,C108000,Insulin-dependent diabetes mellitus with renal complications,Read codes v2,1
+59,Chronic Paediatric Condition,Diabetes,Diabetes,C108000,Insulin-dependent diabetes mellitus with renal complications,Read codes v2,2
+1503,Chronic Paediatric Condition,Other neurological (excluding epilepsy and headaches),Other neurological - other neurological condition,A788400,Human immunodeficiency virus with neurological disease,Read codes v2,1
+77,Chronic Paediatric Condition,Chronic infections,Chronic infections,A788400,Human immunodeficiency virus with neurological disease,Read codes v2,2
