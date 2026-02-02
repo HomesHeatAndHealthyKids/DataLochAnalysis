@@ -1,6 +1,7 @@
 # DataLochAnalysis
 Various files relating to analysis of DataLoch data including:
-1. code_list.csv
+1. code_list.csv - lists of ICD 10 and Read V2 codes identifying different conditions
+2. build_phenotype_lists 
 
 ## Code_list.csv
 Code list that combines chronic paediatric conditions from harmonised code lists with code lists defining the Acute Respiratory Infections. The two lists are separated by the field “Phenotype_category.” The “code” field includes both ICD-10 (with dots removed) and 7‑character Read V2 codes. If you’d like a de‑duplicated view, just filter to rows where Rank = 1.
