@@ -62,7 +62,7 @@ iii)	Wheeze read codes (mapped from ICD-10 using (2) and from Clinical Terminolo
 -	R060F		[D]Moderate wheeze	
 -	173e.		Viral induced wheeze	
 -	R060H		[D]Very severe wheeze	
--	2326.		O/E - expiratory wheeze	
+-	2326\.		O/E - expiratory wheeze	
 -	173B.		Nocturnal cough / wheeze	
 -	232H.		On examination - inspiratory wheeze	
 
