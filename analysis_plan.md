@@ -5,7 +5,7 @@ flowchart TD
   %% Establish cohort
   subgraph A [Cohort]
     A1[Children < 5, born >= 2012]
-    A2{Residential history >= 6 months?}
+    A2{Continuous Residential History in Lothian}
     A1 --> A2
   end
 
@@ -30,10 +30,15 @@ flowchart TD
     H1[Hidden respiratory states]
   end
 
+  subgraph E [Descriptive Statistics]
+    H2[Stratified Statistics]
+  end
+
   %% Flow
   A2 --> B
   B --> Cx
   B --> D
+  A2 --> E
 
   classDef exp fill:#1b9e77,color:#fff,stroke:#1b9e77,stroke-width:1px;
   classDef conf fill:#377eb8,color:#fff,stroke:#377eb8,stroke-width:1px;
