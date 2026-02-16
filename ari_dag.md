@@ -39,35 +39,41 @@ end
 %% Structural pathways
 %% =========================
 
-SES --> Ethnicity
+
 SES --> Housing_age_tenure
 SES --> Energy_efficiency
-SES --> Urban_rural
+SES --> Underheated_home
 SES --> Indoor_air_quality
 SES --> Healthcare_ARI
 
+Ethnicity --> SES
 Ethnicity --> Urban_rural
 Ethnicity --> Energy_efficiency
 Ethnicity --> Indoor_air_quality
 Ethnicity --> Healthcare_ARI
+Ethnicity --> Underheated_home
+Ethnicity --> Household_composition
 
 Housing_age_tenure --> Energy_efficiency
-Housing_age_tenure --> Underheated_home
 
 Energy_efficiency --> Indoor_air_quality
-Energy_efficiency --> Indoor_temp
 Energy_efficiency --> Underheated_home
 
 Urban_rural --> Outdoor_AP
-Urban_rural --> Indoor_air_quality
+Urban_rural --> Energy_efficiency
+Urban_rural --> Underheated_home
+
 
 Climatic_region --> Underheated_home
-Climatic_region --> Household_composition
+Climatic_region --> Damp
+Climatic_region --> Healthcare_ARI
 
 Outdoor_AP --> Indoor_air_quality
+Outdoor_AP --> Healthcare_ARI
 
-Household_composition --> Healthcare_ARI
-Household_composition --> Indoor_temp
+Household_composition --> Household_transmission
+Household_composition --> Damp
+Household_composition --> Indoor_air_quality
 
 Household_transmission --> Healthcare_ARI
 
@@ -75,14 +81,13 @@ Household_transmission --> Healthcare_ARI
 %% Mediated (indirect) pathways
 %% =========================
 
-Indoor_air_quality -.-> Child_immune_function
-Indoor_air_quality -.-> Indoor_temp
-Indoor_air_quality -.-> Damp
+Indoor_air_quality -.-> Healthcare_ARI
 
 Indoor_temp -.-> Damp
+Indoor_temp -.-> Child_immune_function
 
 Child_immune_function -.-> Healthcare_ARI
-Indoor_temp -.-> Healthcare_ARI
+
 Damp -.-> Healthcare_ARI
 
 %% =========================
@@ -92,8 +97,8 @@ Damp -.-> Healthcare_ARI
 Underheated_home -->|Direct effect| Healthcare_ARI
 
 %% Optional extended mediated pathway emphasis
-Underheated_home --> Indoor_temp
-Underheated_home --> Damp
+Underheated_home -.-> Indoor_temp
+Underheated_home -.-> Indoor_air_quality
 
 %% =========================
 %% Styling
@@ -110,6 +115,9 @@ class Underheated_home exposure;
 class Healthcare_ARI outcome;
 
 %% Edge styling (green causal pathway)
-linkStyle 30 stroke:#2e7d32,stroke-width:3px;
-
+linkStyle 32 stroke:#2e7d32,stroke-width:5px;
+linkStyle 29 stroke:#2e7d32,stroke-width:3px;
+linkStyle 33 stroke:#2e7d32,stroke-width:3px;
+linkStyle 34 stroke:#2e7d32,stroke-width:3px;
+linkStyle 32 stroke:#2e7d32,stroke-width:3px;
 ```
