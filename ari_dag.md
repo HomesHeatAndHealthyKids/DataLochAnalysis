@@ -117,7 +117,10 @@ class Healthcare_ARI outcome;
 %% Edge styling (green causal pathway)
 linkStyle 32 stroke:#2e7d32,stroke-width:5px;
 linkStyle 29 stroke:#2e7d32,stroke-width:3px;
+linkStyle 27 stroke:#2e7d32,stroke-width:3px;
+linkStyle 30 stroke:#2e7d32,stroke-width:3px;
+linkStyle 31 stroke:#2e7d32,stroke-width:3px;
+linkStyle 28 stroke:#2e7d32,stroke-width:3px;
 linkStyle 33 stroke:#2e7d32,stroke-width:3px;
 linkStyle 34 stroke:#2e7d32,stroke-width:3px;
-linkStyle 32 stroke:#2e7d32,stroke-width:3px;
 ```
