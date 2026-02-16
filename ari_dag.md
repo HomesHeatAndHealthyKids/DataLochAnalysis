@@ -1,5 +1,10 @@
 ## Acute Respiratory Infection - Causal Diagram
 Causal Diagram for Acute Respiratory Infections in housing taking us from exposure to living in an underheated home to an Acute Respiratory Infection.
+* Exposure = Underheated home
+* Outcome = Healthcare for ARI
+* Red nodes = confounders to adjust for
+* Blue nodes = other nodes on the pathway (no adjustment)
+* Green arrows = direct effect of exposure on outcome
 
 ```mermaid
 graph TD
@@ -96,7 +101,7 @@ Damp -.-> Healthcare_ARI
 
 Underheated_home -->|Direct effect| Healthcare_ARI
 
-%% Optional extended mediated pathway emphasis
+
 Underheated_home -.-> Indoor_temp
 Underheated_home -.-> Indoor_air_quality
 
