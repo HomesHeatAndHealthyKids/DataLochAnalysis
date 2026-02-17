@@ -21,10 +21,10 @@ subgraph Socioeconomic_and_Structural[Socioeconomic and Structural Confounders]
     Urban_rural((Urban<br>Rural))
     Climatic_region((Climatic<br>Region))
     Household_composition((Household<br>Composition))
+    Outdoor_AP((Outdoor<br>Pollution))
 end
 
 subgraph Indoor_Environment_and_Biology[Indoor Environment And Biology]
-    Outdoor_AP((Outdoor<br>Pollution))
     Indoor_air_quality((Indoor Air<br>Quality))
     Indoor_temp((Indoor<br>Temperature))
     Damp((Damp))
@@ -114,8 +114,8 @@ classDef indoor fill:#7ec8e3,stroke:#333,stroke-width:1px;
 classDef exposure fill:#c9e265,stroke:#2e7d32,stroke-width:2px;
 classDef outcome fill:#db1c39,stroke:#0d47a1,stroke-width:2px;
 
-class SES,Ethnicity,Housing_age_tenure,Energy_efficiency,Urban_rural,Climatic_region,Household_composition structural;
-class Outdoor_AP,Indoor_air_quality,Indoor_temp,Damp,Child_immune_function,Household_transmission indoor;
+class Outdoor_AP,SES,Ethnicity,Housing_age_tenure,Energy_efficiency,Urban_rural,Climatic_region,Household_composition structural;
+class Indoor_air_quality,Indoor_temp,Damp,Child_immune_function,Household_transmission indoor;
 class Underheated_home exposure;
 class Healthcare_ARI outcome;
 
@@ -129,3 +129,72 @@ linkStyle 28 stroke:#2e7d32,stroke-width:3px;
 linkStyle 33 stroke:#2e7d32,stroke-width:3px;
 linkStyle 34 stroke:#2e7d32,stroke-width:3px;
 ```
+
+
+## Questions about the DAG
+
+### What is climatic region and how does it influence ARI admissions?
+
+I think climatic region is actually outdoor temperature/weather and we should produce  "separate" pathways for damp.
+```mermaid
+graph LR
+
+
+OutdoorTemperature(("Outdoor<br>Temperature"))
+UnderheatedHome(("Underheated<br>Home"))
+EnergyEfficiency(("Energy<br>Efficiency/Insulation"))
+InternalTemperature(("Indoor<br>Temperature"))
+RespiratoryInfection(("Respiratory<br>Infection"))
+
+OutdoorTemperature --> InternalTemperature
+UnderheatedHome --> InternalTemperature
+EnergyEfficiency --> InternalTemperature
+InternalTemperature --> RespiratoryInfection
+
+classDef outcome fill:#db1c39,stroke:#0d47a1,stroke-width:2px;
+class RespiratoryInfection outcome;
+```
+
+```mermaid
+graph LR
+OutdoorHumidity(("Outdoor Humidity<br>Raininess"))
+UnderheatedHome(("Underheated<br>Home"))
+EnergyEfficiency(("Energy<br>Efficiency/Ventilation"))
+Damp(("Internal<br>Damp"))
+RespiratoryInfection(("Respiratory<br>Infection"))
+InternalTemperature(("Indoor<br>Temperature"))
+
+OutdoorHumidity --> Damp
+UnderheatedHome --> Damp
+EnergyEfficiency --> Damp
+InternalTemperature --> Damp
+Damp-->RespiratoryInfection
+
+
+classDef outcome fill:#db1c39,stroke:#0d47a1,stroke-width:2px;
+class RespiratoryInfection outcome;
+```
+
+### Healthcare Admission for ARI
+I think the pathway for Healthcare ARI is slightly more involved than shown on the causal graph. If a child has a respiratory infection, then the parents must decide to contact the health services. That decision is likely to be influenced by a lot of factors. For example, ethnicity, socioeconomic status, tenure or rural/urban living may be factors which influence the decision to contact the healthcare services. So, for example, An owner/occupier may be more likely to be registered with a GP and, thus, more likely to contact the GP. Some of these pathways already exist in the top graph, but it may be a clearer to think of it this way. A big question is whether this may have the potential to cause problems with any analysis? 
+```mermaid
+graph TB
+RespiratoryInfection(("Respiratory<br>Infection"))
+ContactHealthServices(("Contact/Use Health<br>Services"))
+HealthcareForARI(("ARI<br>Healthcare"))
+UnderheatedHome(("Underheated<br>Home"))
+SES(("Socioeconomic<br>Status??<br>Urban/Rural??"))
+
+UnderheatedHome --> RespiratoryInfection
+RespiratoryInfection --> ContactHealthServices
+ContactHealthServices --> HealthcareForARI
+SES --> ContactHealthServices
+SES --> UnderheatedHome
+
+classDef outcome fill:#db1c39,stroke:#0d47a1,stroke-width:2px;
+classDef exposure fill:#c9e265,stroke:#2e7d32,stroke-width:2px;
+
+class HealthcareForARI outcome;
+class UnderheatedHome exposure;
+```
+
