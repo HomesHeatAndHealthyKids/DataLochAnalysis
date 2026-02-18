@@ -5,6 +5,7 @@ Various files relating to analysis of DataLoch data including:
 2. build_phenotype_lists - colab notebook used to build the codelist from HDRUK codelists - identifies codelist and any further data manipulation
 3. analysis_plan.md - file setting out plan for analysis of DataLoch data
 4. data_linkage.md - file showing linkage of DataLoch data
+5. DataLoch_Data_Dictionary.csv - file showing the tables and fields that are available in the DataLoch environment with notes
 
 ## Code_list.csv
 
