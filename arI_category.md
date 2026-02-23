@@ -16,9 +16,12 @@ The flow chart below shows how an individual SMR01 record is assigned to a parti
 
 >a) Admission with ARI
 HDR-UK phenotype code lists will be used. 
+>
 >i)	Lower respiratory tract infections:
 https://phenotypes.healthdatagateway.org/phenotypes/PH488/version/1521/detail/ 
+>
 >ii)	Upper respiratory tract infections: https://phenotypes.healthdatagateway.org/phenotypes/PH158/version/316/detail/ 
+>
 >iii)	In addition, to ensure we include children presenting with viral induced wheeze (for which there is no ICD-10 code), we will also include the following ICD-10 codes (as previously published in (1)).
 >-	R06.2	Wheezing
 >-	R06.0	Dyspnoea
