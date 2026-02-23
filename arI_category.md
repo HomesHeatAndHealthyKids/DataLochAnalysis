@@ -48,7 +48,7 @@ flowchart TB
     %% Observed Variables
     %% =========================
     SMR_rec[SMR01 Admission Record]
-    ICD_10_non_asthma[ICD-10 in ARI Code List]
+    ICD_10_non_asthma["ICD-10 in ARI Code List (excl. Asthma)"]
     Diag_pos_1[MAIN_CONDITION]
     Diag_pos_2[OTHER_CONDITION_1]
     Diag_pos_3[OTHER_CONDITION_2]
