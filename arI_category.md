@@ -192,7 +192,7 @@ flowchart TB
 
 We will consider multiple GP read codes on a single day to be a single event. The multiple codes may affect how a GP visit is categorised. GP Visits, prescriptions and hospital admissions will all be considered separately for the analysis.
 
-The vast majority of GP visits are categorised by a single Read code v2 value. However, like hospital admissions, GP Visits will be categorised in two ways. First, we will test whether the visit to the GP is for an Acute Respiratory Infection. 
+The vast majority of GP visits are categorised by a single Read code v2 value. However, like hospital admissions, GP Visits will be categorised in two ways. GP read codes do not have a hierarchy of visits so we cannot distinguish between a main code and secondary codes. First, we will test whether the visit to the GP is for an Acute Respiratory Infection. 
 
 ### Acute Respiratory Infections
 ```mermaid
@@ -254,3 +254,64 @@ flowchart TB
 ```
 
 If multiple GP read code v2 match ARIs on a particular day, then we will assign the ARI using the first record in the file for a particular child on a particular day. 
+
+### Chronic Conditions
+```mermaid
+flowchart TB
+
+    %% =========================
+    %% Observed Variables
+    %% =========================
+    GP_rec[GP Event]
+    Diag_pos_1[All GP Read Codes for a particular day]
+    Read_Chronic[Chronic Read code v2 list]
+
+    %% =========================
+    %% Rule Nodes (Deterministic)
+    %% =========================
+    R_Chronic((Chronic Condition Rule))
+    
+    %% =========================
+    %% Outcomes
+    %% =========================
+    Y[Count Chronic GP Visit]
+    N[Non Chronic GP Visit]
+
+    %% =========================
+    %% Causal Structure
+    %% =========================
+
+    GP_rec --> Diag_pos_1
+
+    %% General ARI pathway
+    Diag_pos_1 -->  |Any code in list| Read_Chronic
+    Diag_pos_1 --> |Otherwise| N
+
+
+    %% General ARI pathway
+    Read_Chronic --> R_Chronic
+
+
+   
+
+    %% General rule applies only if not Asthma
+    R_Chronic --> Y
+   
+
+    %% =========================
+    %% Styling
+    %% =========================
+    classDef record fill:#4E86AD,color:#ffffff,stroke:#1e8449,stroke-width:2px;
+    classDef include fill:#2ecc71,color:#ffffff,stroke:#1e8449,stroke-width:2px;
+    classDef exclude fill:#e74c3c,color:#ffffff,stroke:#922b21,stroke-width:2px;
+    classDef rule fill:#86AFC4,color:#ffffff,stroke:#1f618d,stroke-width:2px;
+    classDef data fill:#E6C7AF,color:#000000,stroke:#7b7d7d,stroke-width:1px;
+
+    class Y include
+    class N exclude
+    class R_Chronic rule
+    class ICD10_Chronic,Diag_pos_1,Read_Chronic data
+    class GP_rec record
+```
+
+If multiple GP read code v2 match Chronic conditions on a particular day, then we will assign the Chronic Condition using the first record in the file for a particular child on a particular day. 
