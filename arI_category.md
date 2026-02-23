@@ -4,7 +4,7 @@ This document deals with the assignment of healthcare records to a particular Ac
 2. GP Read Code - GP Read codes after GP attendance
 
 ## Hospital Admissions
-Hospital admissions often show multiple admissions for a single child Admissions will be considered a single admission if there is a previous admission within the last 7 days. The first admission date will be the date when the admission is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions. The diagnosis codes will be the diagnosis codes for the last record. 
+Hospital admissions often show multiple admissions for a single child. Admissions will be considered a single admission if there is a previous admission within the last 7 days. The first admission date will be the date when the admission is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions. The diagnosis codes will be the diagnosis codes for the last discharge record. 
 
 Hospital Admissions will be categorised in two ways:
 i) Acute Respiratory Infection 
@@ -50,7 +50,7 @@ flowchart TB
     %% =========================
     %% Observed Variables
     %% =========================
-    SMR_rec[SMR01 Admission Record]
+    SMR_rec[SMR01 Discharge Record]
     ICD_10_non_asthma["ICD-10 in ARI Code List (excl. Asthma)"]
     Diag_pos_1[MAIN_CONDITION]
     Diag_pos_2[OTHER_CONDITION_1]
@@ -66,8 +66,8 @@ flowchart TB
     %% =========================
     %% Outcomes
     %% =========================
-    Y[Count Admission]
-    N[Exclude Admission]
+    Y[Count ARI Admission]
+    N[Non ARI Admission]
 
     %% =========================
     %% Causal Structure
@@ -126,7 +126,7 @@ flowchart TB
     %% =========================
     %% Observed Variables
     %% =========================
-    SMR_rec[SMR01 Admission Record]
+    SMR_rec[SMR01 Discharge Record]
     Diag_pos_1[MAIN_CONDITION]
     Diag_pos_2[OTHER_CONDITION_1]
     Diag_pos_3[OTHER_CONDITION_2]
@@ -140,8 +140,8 @@ flowchart TB
     %% =========================
     %% Outcomes
     %% =========================
-    Y[Count Admission]
-    N[Exclude Admission]
+    Y[Count Chronic Admission]
+    N[Non-Chronic Admission]
 
     %% =========================
     %% Causal Structure
@@ -213,8 +213,8 @@ flowchart TB
     %% =========================
     %% Outcomes
     %% =========================
-    Y[Count GP Visit]
-    N[Exclude GP Visit]
+    Y[Count ARI GP Visit]
+    N[Non ARI GP Visit]
 
     %% =========================
     %% Causal Structure
