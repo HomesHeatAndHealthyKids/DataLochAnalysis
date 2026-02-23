@@ -249,3 +249,5 @@ flowchart TB
     class ICD10_Chronic,Diag_pos_1,Read_ARI data
     class GP_rec record
 ```
+
+If multiple GP read code v2 match ARIs on a particular day, then we will assign the ARI using the first record in the file for a particular child on a particular day. 
