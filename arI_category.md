@@ -6,6 +6,46 @@ This document deals with the assignment of healthcare records to a particular Ac
 ## Hospital Admissions
 Hospital admissions often show multiple admissions for a single child. Admissions will be considered a single admission if there is a previous admission within the last 7 days. The first admission date will be the date when the admission is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions. The diagnosis codes will be the diagnosis codes for the last discharge record. 
 
+```mermaid
+
+flowchart TD
+
+  SMR_child_data["Go through records for each individual child and sort by admission date (oldest first)"] --> C["Start at first record for this child"]
+  C --> start_episode["Start a new episode; set episode admission date and admission type from current record; reset totals"]
+  E{"Has it been more than 7 days since the previous admission?"} -->|"Yes"| SMR_output_rec
+  SMR_output_rec --> start_episode
+  E -->|"No"| F["Continue the current episode"]
+
+  start_episode --> G["Compute this stay's days = max(1, days between admission and discharge)"]
+  F --> G
+  G --> H["Add this record's days to the episode total"]
+
+  H --> I{"Is this the latest discharge seen in the episode so far? If tied, pick the one with the later admission date"}
+  I -->|"Yes"| J["Update episode with ICD10 codes from this stay"]
+  I -->|"No"| K["Keep current episode ICD10 conditions"]
+
+  J --> L{"More records for this child?"}
+  K --> L
+  L -->|"Yes"| M["Move to next record"]
+  M --> E
+  L -->|"No"| SMR_output_rec["Output the episode: episode admission date, admission type, MAIN_CONDITION from latest discharge, total stay length"]
+
+  %% =========================
+  %% Styling
+  %% =========================
+  classDef record fill:	#C5333A,color: #ffffff,stroke: #1e8449,stroke-width:2px;
+  classDef data fill: #2F5F93,color: #ffffff,stroke: #7b7d7d,stroke-width:1px;
+  classDef node fill: #E6C7AF,color: #000000,stroke: #7b7d7d,stroke-width:1px;
+
+  class SMR_output_rec record
+  class SMR_child_data data
+  class C,D,E,F,G,H,J,K,L,M node
+
+```
+
+
+
+
 Hospital Admissions will be categorised in two ways:
 i) Acute Respiratory Infection 
 ii) Chronic Conditions
@@ -118,7 +158,7 @@ flowchart TB
 ```
 ### Chronic Conditions
 
-Separately, an SMR01 admission record is categorised as a chronic condition using the following flowchart. The record is assigned to the phenotype name and clinical subcategory associated with the ICD10 code.
+Separately, an SMR01 admission record is categorised as a chronic condition using the following flowchart. The record is assigned to the phenotype name and clinical subcategory associated with the ICD10 code. This should work more as children being assigned to conditions
 
 ```mermaid
 flowchart TB
