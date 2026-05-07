@@ -1,10 +1,77 @@
 # Assignment of Healthcare Records
-This document deals with the assignment of healthcare records to a particular Acute Respiratory Infection. There are two types of healthcare records:
-1. SMR01 - Hospital Admission Records
-2. GP Read Code - GP Read codes after GP attendance
+This document deals with the assignment of healthcare records to a particular condition. There are three input tables of healthcare records:
+1. **SMR01** - Hospital Admission Records
+        - patient_id, condition_codes, admission_date, discharge_date
+2. **GPReadCodes** - GP Read codes after GP attendance
+        - patient_id, Read code, visit_date
+3. **Prescriptions** - Each prescription of Salbutamol, Clarithromycin, or Amoxicillin
+        - patient_id, prescription_name, dispensed_date
 
-## Hospital Admissions
-Hospital admissions often show multiple admissions for a single child. Admissions will be considered a single admission if there is a previous admission within the last 7 days. The first admission date will be the date when the admission is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions. The diagnosis codes will be the diagnosis codes for the last discharge record. 
+## High-level process
+
+**Normalisation**: Convert input tables into a single Healthcare Events table with unified schema:
+*   patient_id 
+*   condition_code - what is this code? is it clinical_subcategory?
+*   event_type ∈ {GP, RX, ADM}
+*   event_start_date, event_end_date (for GP and RX, end = start, for hospital admission, end = discharge date)
+*   cost 
+*   optional: prescription_id, drug_code, admission_id
+
+```mermaid
+flowchart TD
+    A[Raw GPReadCodes] --> A_assign["Categorise GP Visit as Condition"]
+    A2[Raw Prescriptions] --> A2_assign["Categorise Prescription as Condition"]
+    A3[Raw SMR01] --> A3_assign["Categorise Hospital Admission as Condition"]
+    A_assign --> B[Normalise/Combine]
+    A2_assign --> B
+    A3_assign --> B
+    B --> C[Validate & Clean]
+    C --> D[Partition by patient_id + condition]
+    D --> E[Sort by start_date, then end_date desc]
+    E --> F["Episode Builder (7-day gap rule)"]
+    F --> G[Aggregate Metrics per Episode]
+    G --> H[Episode Output Table]
+
+  %% =========================
+  %% Styling
+  %% =========================
+  classDef output fill:	 #2F5F93,color: #ffffff,stroke: #1e8449,stroke-width:2px;
+  classDef record fill:	#C5333A,color: #ffffff,stroke: #1e8449,stroke-width:2px;
+  classDef data fill: #E6C7AF,color: #000000,stroke: #7b7d7d,stroke-width:1px;
+  class F record
+  class A,A2,A3 data
+  class H output
+```
+## Episode Builder
+There are many events that are close together. For example, hospital admissions often show multiple admissions for a single child. Events will be considered a single Episode if there is a previous event within the last 7 days. The first event date will be the date when the episode is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions, but they will be considered to be the same condition (clinical subcategory?). The diagnosis codes will be the diagnosis codes for the last discharge record. 
+**Goal**: Group events of the same patient and same condition into episodes, where any gap between consecutive events in an episode is at most max_gap_days (default 7). Episodes can be longer than 7 days; the 7 days limit applies to the gap between events, not the total episode length.
+### Events:
+*    GP visit: single-day event.
+*    Prescription: single-day event with a cost and product identifier.
+*    Hospital admission: multi-day event with start_date and end_date.
+ 
+Episode outputs per patient + condition:
+*   episode_start_date, episode_end_date
+*   gp_visit_count
+*   hospital_days_total
+*   prescription_count
+*   prescription_cost_total
+*   Optional: hospital_admissions_count, distinct_prescription_count, list of prescription types
+
+### Key Business Rules
+
+**Partitioning**: Build episodes independently per patient_id and condition_code.
+**Gap rule**: A new event belongs to the current episode if event.start_date <= current_episode_end + max_gap_days. Otherwise, close the episode and start a new one. Default max_gap_days = 7.
+**Episode window expansion**: When adding an event, extend current_episode_end = max(current_episode_end, event.end_date). Hospital admissions can extend episodes forward.
+**Same-day/back-to-back**:
+*   If event start date <= current episode end, it is within the episode (overlap).
+*   If event start date is exactly current episode end + 1 (.e., no full-day gap), still within episode because gap = 1 <= 7.
+
+**Hospital day counting**:
+* Parameter day_count_mode:
+        inclusive_days: hospital_days = (end_date - start_date) + 1
+            nights_only: hospital_days = (end_date - start_date)
+* Costs: Sum per prescription record’s cost within the episode. 
 
 ### Combining Admissions
 Flow chart showing how to combine hospital admissions.
@@ -13,10 +80,13 @@ Flow chart showing how to combine hospital admissions.
 
 flowchart TD
 
-  SMR_child_data["Go through records for each individual child and sort by admission date and then discharge date (both oldest first) "] --> C["Start at first record for this child"]
-  C --> start_episode["Start a new episode; set episode admission date and admission type from current record; reset total days"]
+  SMR_child_data["Go through records for each individual child and condition and sort by start date and then end date (both oldest first) "] --> C["Start at first record for this child"]
+  C --> start_episode["Start a new episode; set episode start date and admission type from current record; reset total days"]
   E{"Has it been more than 7 days since the previous admission?"} -->|"Yes"| SMR_output_rec
-  SMR_output_rec --> start_episode
+  SMR_output_rec --> move_next["Is there more data for this child"]
+  move_next --> |"Yes"| start_episode
+  move_next --> |"No"| end_process["End episode building"]
+
   E -->|"No"| F["Continue the current episode"]
 
   start_episode --> G["Compute this stay's raw days = max(1, days between admission and discharge)"]
@@ -30,13 +100,13 @@ flowchart TD
 
 
 
-  H --> J["Update episode with ICD10 codes from this record"]
+  H --> J["Update episode with condition from this record"]
   
   J --> L{"More records for this child?"}
 
   L -->|"Yes"| M["Move to next record"]
   M --> E
-  L -->|"No"| SMR_output_rec["Output the episode: episode admission date, admission type, MAIN_CONDITION from latest discharge, total stay length"]
+  L -->|"No"| SMR_output_rec["Output the episode: episode start date, end date, condition from latest discharge, total stay length, cost"]
 
   %% =========================
   %% Styling
@@ -47,7 +117,7 @@ flowchart TD
   classDef new_data fill: #2ecc71,color: #ffffff,stroke: #7b7d7d,stroke-width:1px;
 
   class SMR_output_rec record
-  class SMR_child_data data
+  class SMR_child_data,end_process data
   class C,D,E,F,G,H,J,K,L,M node
   class start_episode new_data
 
@@ -238,7 +308,7 @@ flowchart TB
     class SMR_rec record
 ```
 
-## Assignment of GP Records
+## Categorising GP Records
 
 We will consider multiple GP read codes on a single day to be a single event. The multiple codes may affect how a GP visit is categorised. GP Visits, prescriptions and hospital admissions will all be considered separately for the analysis.
 
