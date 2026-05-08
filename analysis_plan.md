@@ -1,4 +1,4 @@
-Proposed Analysis Plan:
+Analysis Plan:
 
 ```mermaid
 flowchart TD
@@ -10,8 +10,8 @@ flowchart TD
   end
 
   %% Causal structure
-  subgraph B [Causal structure DAG]
-    X[Underheated home]
+  subgraph B [Causal structure]
+    X["EPC (Underheated home)"]
     Y[Healthcare for ARI]
     C[Baseline confounders]
     X --> Y
@@ -20,29 +20,31 @@ flowchart TD
   end
 
   %% Analysis branches
-  subgraph Cx [Natural experiments / DiD]
-    E0[House move event]
-    E1[Event-study DiD]
-    E0 --> E1
-  end
+  %% subgraph Cx [Natural experiments / DiD]
+  %%   E0[House move event]
+  %%   E1[Event-study DiD]
+  %%   E0 --> E1
+  %% end
 
   subgraph D [Exploratory HMM]
     H1[Hidden respiratory states]
   end
 
   subgraph E [Descriptive Statistics]
-    H2[Stratified Statistics]
+   H2[Stratified Statistics]
   end
 
   %% Flow
   A2 --> B
-  B --> Cx
+  %% B --> Cx
   B --> D
   A2 --> E
 
-  classDef exp fill:#1b9e77,color:#fff,stroke:#1b9e77,stroke-width:1px;
-  classDef conf fill:#377eb8,color:#fff,stroke:#377eb8,stroke-width:1px;
-  classDef med fill:#ff7f00,color:#fff,stroke:#ff7f00,stroke-width:1px;
-  classDef out fill:#e41a1c,color:#fff,stroke:#e41a1c,stroke-width:1px;
-  classDef note fill:#f0f0f0,stroke:#999,stroke-width:1px,color:#333;
+  classDef exp fill:  #E6C7AF,color:#fff,stroke:#1b9e77,stroke-width:1px;
+  classDef conf fill: #86AFC4,color:#fff,stroke:#377eb8,stroke-width:1px;
+  classDef med fill: #D96A4C,color:#fff,stroke:#ff7f00,stroke-width:1px;
+
+ %% class Cx,D,E med
+ %% class A conf
+ %% class B exp
 ```
