@@ -23,8 +23,11 @@ Episode outputs per patient + condition:
 ### Key Business Rules
 
 **Partitioning**: Build episodes independently per patient_id and condition_code.
+
 **Gap rule**: A new event belongs to the current episode if event.start_date <= current_episode_end + max_gap_days. Otherwise, close the episode and start a new one. Default max_gap_days = 7.
+
 **Episode window expansion**: When adding an event, extend current_episode_end = max(current_episode_end, event.end_date). Hospital admissions can extend episodes forward.
+
 **Same-day/back-to-back**:
 *   If event start date <= current episode end, it is within the episode (overlap).
 *   If event start date is exactly current episode end + 1 (.e., no full-day gap), still within episode because gap = 1 <= 7.
@@ -51,10 +54,10 @@ flowchart TD
 
   E -->|"No"| F["Continue the current episode"]
 
-  start_episode --> G["Compute this stay's raw days = max(1, days between admission and discharge)"]
+  start_episode --> G["Compute this stay's raw days = max(1, days between start and end of event)"]
   F --> G
   
-  G --> adm_check{"Is this admission date the same as the previous discharge date?"}
+  G --> adm_check{"Is the start date the same as the previous end date?"}
   adm_check -->|"Yes (back-to-back)"| bound_adj["Boundary-day adjustment = 1 (avoid double-counting the shared day)"]
   adm_check -->|"No"| no_bound_adj["Boundary-day adjustment = 0"]
   bound_adj --> H["Add to episode total days: raw days − boundary-day adjustment"]
