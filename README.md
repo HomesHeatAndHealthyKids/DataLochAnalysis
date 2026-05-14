@@ -14,7 +14,7 @@ Descriptive statistics will be produced for the cohort over time. Multi-level mo
 ## Github Files
 Various files relating to analysis of DataLoch data including:
 1. [Code List](code_list.csv) - lists of ICD 10 and Read V2 codes identifying different conditions
-2. [build_phenotype_lists](code_updates\building_phenotype_list.ipynb) - colab notebook used to build the codelist from HDRUK codelists - identifies codelist and any further data manipulation
+2. [build_phenotype_lists](code_updates/building_phenotype_list.ipynb) - colab notebook used to build the codelist from HDRUK codelists - identifies codelist and any further data manipulation
 3. [analysis plan](analysis_plan.md) - graph setting out plan for analysis of DataLoch data
 4. [data linkage](linkage_plan.md) - file showing linkage of DataLoch data
 5. [healthcare process](healthcare_process.md) - file showing how a hospital admission record from SMR01 is assigned to particular categories of disease (chronic or Acute Respiratory Infection) before being combined into an extended episode
