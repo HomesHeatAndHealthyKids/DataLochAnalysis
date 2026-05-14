@@ -47,17 +47,21 @@ flowchart TD
 
   SMR_child_data["Go through records for each individual child and condition and sort by start date and then end date (both oldest first) "] --> C["Start at first record for this child"]
   C --> start_episode["Start a new episode; set episode start date and admission type from current record; reset total days"]
-  E{"Has it been more than 7 days since the previous admission?"} -->|"Yes"| SMR_output_rec
+  E{"Has it been more than 7 days since the previous event?"} -->|"Yes"| SMR_output_rec
   SMR_output_rec --> move_next["Is there more data for this child"]
   move_next --> |"Yes"| start_episode
   move_next --> |"No"| end_process["End episode building"]
 
   E -->|"No"| F["Continue the current episode"]
 
-  start_episode --> G["Compute this stay's raw days = max(1, days between start and end of event)"]
+  start_episode --> G["Determine healthcare event type"]
   F --> G
-  
-  G --> adm_check{"Is the start date the same as the previous end date?"}
+  G --> |GP Visit| gp_visit_process["Add GP visit"]
+  gp_visit_process --> L
+  G --> |Prescription| prescription_process["Add Prescription"]
+  prescription_process --> L
+  G --> |Hospital| H["Compute this stay's raw days = max(1, days between start and end of event)"]  
+  H --> adm_check{"Is the start date the same as the previous end date?"}
   adm_check -->|"Yes (back-to-back)"| bound_adj["Boundary-day adjustment = 1 (avoid double-counting the shared day)"]
   adm_check -->|"No"| no_bound_adj["Boundary-day adjustment = 0"]
   bound_adj --> H["Add to episode total days: raw days − boundary-day adjustment"]
@@ -69,7 +73,7 @@ flowchart TD
   
   J --> L{"More records for this child?"}
 
-  L -->|"Yes"| M["Move to next record"]
+  L -->|"Yes"| M["Move to next record."]
   M --> E
   L -->|"No"| SMR_output_rec["Output the episode: episode start date, end date, condition from latest discharge, total stay length, cost"]
 
