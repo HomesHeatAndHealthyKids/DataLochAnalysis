@@ -18,6 +18,7 @@ Various files relating to analysis of DataLoch data including:
 3. analysis_plan.md - file setting out plan for analysis of DataLoch data
 4. data_linkage.md - file showing linkage of DataLoch data
 5. ari_category.md - file showing how a hospital admission record from SMR01 is assigned to particular categories of disease (chronic or Acute Respiratory Infection)
+6. DataLoch_Data_Dictionary.csv - file showing the tables and fields that are available in the DataLoch environment with notes
 
 ## Code_list.csv
 

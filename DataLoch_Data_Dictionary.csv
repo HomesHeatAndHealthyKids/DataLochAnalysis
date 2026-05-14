@@ -1,0 +1,304 @@
+﻿Category,DataTable,Field,Notes
+Children,Demographics,ppid,Pseudonymised Patient ID
+Children,Demographics,DateOfBirth,
+Children,Demographics,SeasonAtBirth,
+Children,Demographics,DOBMatchesCHI,
+Children,Demographics,Sex,
+Children,Demographics,Ethnicity,
+Children,Demographics,Ethnicity6,
+Children,Demographics,DateOfDeath,
+Children,Demographics,DateOfCensor,Always 60 months after DateOfBirth regardless of DateOfDeath
+Children,Geospatial Reference,ppid,Pseudonymised Patient ID
+Children,Geospatial Reference,address_start_year,
+Children,Geospatial Reference,address_start_month,
+Children,Geospatial Reference,address_end_year,
+Children,Geospatial Reference,address_end_month,
+Children,Geospatial Reference,postcode_pid,Pseudonymised Postcode
+Children,Geospatial Reference,climate_grid_pid,Pseudonymised Climate_Grid
+Children,Geospatial Reference,pollution_grid_pid,Pseudonymised Pollution Grid
+Children,Geospatial Reference,uprn_pid,Pseudonymised UPRN
+Children,SIMD,ppid,Pseudonymised Patient ID
+Children,SIMD,address_start_year,
+Children,SIMD,address_start_month,
+Children,SIMD,address_end_year,
+Children,SIMD,address_end_month,
+Children,SIMD,SIMD2020v2_sc_decile,SIMD 2020 version
+HealthcareEvent,SMR02,ppid,Pseudonymised Patient ID
+HealthcareEvent,SMR02,ESTIMATED_GESTATION,
+HealthcareEvent,SMR02,BOOKING_SMOKING_HISTORY,
+HealthcareEvent,SMR02,SMOKER_DURING_PREGNANCY,
+HealthcareEvent,SMR02,DateOfBirthMatchesDateOfDelivery,
+HealthcareEvent,SMR02,MODE_OF_DELIVERY_BABY_1,
+HealthcareEvent,SMR02,MODE_OF_DELIVERY_BABY_2,
+HealthcareEvent,SMR02,MODE_OF_DELIVERY_BABY_3,
+HealthcareEvent,SMR02,BIRTHWEIGHT_BABY_1,
+HealthcareEvent,SMR02,BIRTHWEIGHT_BABY_2,
+HealthcareEvent,SMR02,BIRTHWEIGHT_BABY_3,
+HealthcareEvent,SMR02,FEED_ON_DISCHARGE_BABY1,
+HealthcareEvent,SMR02,FEED_ON_DISCHARGE_BABY2,
+HealthcareEvent,SMR02,FEED_ON_DISCHARGE_BABY3,
+HealthcareEvent,SMR02,DURATION_OF_PREGNANCY,
+HealthcareEvent,SMR01,ppid,Pseudonymised Patient ID
+HealthcareEvent,SMR01,ADMISSION_DATE,
+HealthcareEvent,SMR01,ADMISSION_TYPE,
+HealthcareEvent,SMR01,DISCHARGE_DATE,
+HealthcareEvent,SMR01,AGE_IN_MONTHS,
+HealthcareEvent,SMR01,MAIN_CONDITION,ICD10 Code
+HealthcareEvent,SMR01,OTHER_CONDITION_1,ICD10 Code
+HealthcareEvent,SMR01,OTHER_CONDITION_2,ICD10 Code
+HealthcareEvent,SMR01,OTHER_CONDITION_3,ICD10 Code
+HealthcareEvent,SMR01,OTHER_CONDITION_4,ICD10 Code
+HealthcareEvent,SMR01,OTHER_CONDITION_5,ICD10 Code
+HealthcareEvent,GPReadCodeEvent,ppid,Pseudonymised Patient ID
+HealthcareEvent,GPReadCodeEvent,FullReadCode,Read code v2
+HealthcareEvent,GPReadCodeEvent,ReadCode,Short Read Code v2
+HealthcareEvent,GPReadCodeEvent,EventDate,
+HealthcareEvent,GPReadCodeEvent,DateOfCensor,
+HealthcareEvent,Prescriptions,Paid Date,DOUBLE_CHECK
+HealthcareEvent,Prescriptions,ppid,Pseudonymised Patient ID
+HealthcareEvent,Prescriptions,PD Dispensed Date,
+HealthcareEvent,Prescriptions,PD Prescribed Date,
+HealthcareEvent,Prescriptions,PI Item Strength/UOM,
+HealthcareEvent,Prescriptions,PI Approved Name,
+HealthcareEvent,Prescriptions,PI BNF Item Code,
+Property,EPC,uprn_pid,Unique property identifier
+Property,EPC,inspection_date,"Date on which assessment of the energy performance of thebuilding was undertaken"
+Property,EPC,type_of_assessment*,"Tool used (SAP, RdSAP) and whether assessment is for new orexisting dwelling."
+Property,EPC,lodgement_date,"Date on which the data from the energy performance assessmentwas lodged to the Scottish EPC Register"
+Property,EPC,energy_consumption_current,"Reports Primary Energy - the amount of energy required at source,before conversion and transmission, to meet the calculatedenergy demand of the dwelling (Units: kWh/m2/year)."
+Property,EPC,total_floor_area,"The total floor area of the dwelling. This excludes any unheatedancillary buildings. (Units: m2)"
+Property,EPC,3_yr_energy_cost_current*,"Calculation illustrating the total energy cost for heating, cooling,lighting, and ventilating the building. Based on standardisedoccupancy patterns and fuel costs. (Units: Â£)"
+Property,EPC,3_yr_energy_saving_potential*,"Calculation illustrating the energy cost saving that may beachieved if the listed improvement measures are carried out.Based on standardised occupancy patterns and fuel costs. (Units:Â£)"
+Property,EPC,current_energy_rating,"Current Energy Efficiency Rating expressed on a Scale of G to A, with A being the highest (best) rating band"
+Property,EPC,current_energy_efficiency,"Current energy cost rating (EER or â€˜SAP ratingâ€™) for the buildingwhich is calculated using both the energy efficiency of the buildingand the cost of fuels used."
+Property,EPC,potential_energy_efficiency,"Potential energy cost rating for the building, after application ofthe listed improvement measures, which is again calculated usingboth the energy efficiency of the improved building and the costof fuels used."
+Property,EPC,potential_energy_rating,"Potential Energy Efficiency Rating expressed on a Scale of G to A,with A being the highest (best) rating band."
+Property,EPC,environment_impact_current,"Current environmental impact for the building which is calculatedusing the emissions associated with the energy use of thebuilding."
+Property,EPC,current_environmental_rating*,"Current Environmental Impact Rating expressed on a Scale of G toA, with A being the highest (best) rating band."
+Property,EPC,environment_impact_potential,"Potential environmental impact for the building, after applicationof the listed improvement measures, which is again calculatedusing the emissions associated with the energy use of thebuilding."
+Property,EPC,potential_environmental_rating*,"Potential Environmental Impact Rating expressed on a Scale of Gto A, with A being the highest (best) rating band."
+Property,EPC,co2_emiss_curr_per_floor_area,"Annual CO2 equivalent emissions per square metre of floor area(units: kg.CO2e/m2/yr)"
+Property,EPC,wall_description,"Summary of the performance of this building element, reported inthe following format: â€˜Description; Energy Efficiency Rating;Environmental Efficiency Rating.â€™  Both ratings elements arereported on a scale of 1 to 5 (very poor, poor, average, good, verygood). Note: where a dwelling has more than one type of thiselement, multiple elements can be reported. Each elementreported is separated by â€œ|â€ [ASCII (decimal) 124]"
+Property,EPC,wall_energy_eff,
+Property,EPC,wall_env_eff,
+Property,EPC,roof_description,As above but describes roof of dwelling.
+Property,EPC,roof_energy_eff,
+Property,EPC,roof_env_eff,
+Property,EPC,floor_description,As above but describes floor of dwelling.
+Property,EPC,floor_energy_eff,
+Property,EPC,floor_env_eff,
+Property,EPC,windows_description,As above but describes windows of dwelling.
+Property,EPC,windows_energy_eff,
+Property,EPC,windows_env_eff,
+Property,EPC,mainheat_description,
+Property,EPC,mainheat_env_eff,
+Property,EPC,mainheatcont_description,As above but describes main heating system controls of dwelling.
+Property,EPC,mainheatc_energy_eff,
+Property,EPC,mainheatc_env_eff,
+Property,EPC,secondheat_description,"As above but describes secondary heating, where present indwelling."
+Property,EPC,sheating_energy_eff,
+Property,EPC,sheating_env_eff,
+Property,EPC,hotwater_description,As above but describes hot water system of dwelling.
+Property,EPC,hot_water_energy_eff,
+Property,EPC,hot_water_env_eff,
+Property,EPC,lighting_description,As above but describes lighting in dwelling.
+Property,EPC,lighting_energy_eff,
+Property,EPC,lighting_env_eff,
+Property,EPC,air_tightness_description*,"As above but describes airtightness of dwelling. Present onlywhere a SAP assessment (which requires an input value for thiselement) is undertaken."
+Property,EPC,air_tightness_energy_eff*,
+Property,EPC,air_tightness_env_eff*,
+Property,EPC,co2_emissions_current,"The total annual emissions reduction for the building based uponthe calculated energy demand for heating, cooling, lighting, andventilating the building. (Units: tonnes per year)"
+Property,EPC,co2_emissions_potential,"Calculation illustrating the total annual emissions reduction for thebuilding if the identified improvement measures are carried out.(Units: tonnes per year)"
+Property,EPC,heating_cost_current,"Calculation illustrating the total energy cost for heating over thestated period. Based on standardised occupancy patterns and fuelcosts. (Units: Â£)"
+Property,EPC,heating_cost_potential,"Calculation illustrating the total energy cost for heating over thestated period if recommended improvement measures are carriedout. Based on standardised occupancy patterns and fuel costs.(Units: Â£)"
+Property,EPC,hot_water_cost_current,"Calculation illustrating the total energy cost for hot water over thestated period. Based on standardised occupancy patterns and fuelcosts. (Units: Â£)"
+Property,EPC,hot_water_cost_potential,"Calculation illustrating the total energy cost for hot water over thestated period if recommended improvement measures are carriedout. Based on standardised occupancy patterns and fuel costs.(Units: Â£)"
+Property,EPC,lighting_cost_current,"Calculation illustrating the total energy cost for lighting over thestated period. Based on standardised occupancy patterns and fuelcosts. (Units: Â£)"
+Property,EPC,lighting_cost_potential,"Calculation illustrating the total energy cost for lighting over thestated period if recommended improvement measures are carried"
+AreaEnergyPoverty,uZero_postcode_features,postcode_pid,Pseudonymised Postcode
+AreaEnergyPoverty,uZero_postcode_features,ladnm,Local Authority District Name
+AreaEnergyPoverty,uZero_postcode_features,lsoa11cd,Local Super Output Area
+AreaEnergyPoverty,uZero_postcode_features,oa_pid,Pseudonymised Output Area
+AreaEnergyPoverty,uZero_postcode_features,epc_consumption_kwh_mean_postcode,"Mean EPC predicted household energy consumption(in kWh) (derived from consumption per unit area andtotal floor area)"
+AreaEnergyPoverty,uZero_postcode_features,epc_consumption_kwh_median_postcode,"Median EPC predicted household energyconsumption (in kWh)  (derived from consumptionper unit area and total floor area)"
+AreaEnergyPoverty,uZero_postcode_features,epc_consumption_kwh_std_postcode,"Standard deviation of EPC predicted householdenergy consumption (in kWh)  (derived fromconsumption per unit area and total floor area)"
+AreaEnergyPoverty,uZero_postcode_features,epc_consumption_per_area_mean_postcode,"Mean EPC predicted household energy consumptionper unit area (in kWh/m^2)"
+AreaEnergyPoverty,uZero_postcode_features,epc_consumption_per_area_median_postcode,"Median EPC predicted household energyconsumption per unit area (in kWh/m^2)"
+AreaEnergyPoverty,uZero_postcode_features,epc_consumption_per_area_std_postcode,"Standard deviation of EPC predicted householdenergy consumption per unit area (in kWh/m^2)"
+AreaEnergyPoverty,uZero_postcode_features,epc_floor_area_mean_postcode,"Mean internal floor area of EPC households in apostcode (in m^2)"
+AreaEnergyPoverty,uZero_postcode_features,epc_floor_area_median_postcode,"Median internal floor area of EPC households in apostcode (in m^2)"
+AreaEnergyPoverty,uZero_postcode_features,epc_floor_area_std_postcode,"Standard deviation of internal floor area of EPChouseholds in a postcode (in m^2)"
+AreaEnergyPoverty,uZero_postcode_features,epc_current_energy_efficiency_mean_postcode,"Mean EPC energy efficiency score of households ina postcode"
+AreaEnergyPoverty,uZero_postcode_features,epc_current_energy_efficiency_median_postcode,"Median EPC energy efficiency score of householdsin a postcode"
+AreaEnergyPoverty,uZero_postcode_features,epc_current_energy_efficiency_std_postcode,"Standard deviation of EPC energy efficiency scoresof households in a postcode"
+AreaEnergyPoverty,uZero_postcode_features,epc_potential_energy_efficiency_mean_postcode,"Mean EPC predicted the maximum potential energyefficiency score of households in a postcode"
+AreaEnergyPoverty,uZero_postcode_features,epc_potential_energy_efficiency_median_postcode,"Median EPC predicted the maximum potentialenergy efficiency score of households in a postcode"
+AreaEnergyPoverty,uZero_postcode_features,epc_potential_energy_efficiency_std_postcode,"Standard deviation of EPC predicted the maximumpotential energy efficiency scores of households in apostcode"
+AreaEnergyPoverty,uZero_postcode_features,epc_energy_efficiency_c_gap_mean_postcode,"Mean increase of EPC energy efficiency scorerequired for households in a postcode to either"
+AreaEnergyPoverty,uZero_postcode_features,epc_energy_efficiency_c_gap_median_postcode,"Median increase of EPC energy efficiency scorerequired for households in a postcode to eitherreach their maximum potential score or band C(whichever is lowest)"
+AreaEnergyPoverty,uZero_postcode_features,epc_energy_efficiency_c_gap_std_postcode,"Standard deviation of the increase in EPC energyefficiency score required for households in apostcode to either reach their maximum potentialscore or band C (whichever is lowest)"
+AreaEnergyPoverty,uZero_postcode_features,epc_percentage_off_mains_gas_postcode,"Percentage of properties in a postcode notconnected to the mains gas network according totheir EPC certificate"
+AreaEnergyPoverty,uZero_postcode_features,epc_percentage_poor_energy_rating_postcode,"Percentage of EPC properties in a postcode inenergy efficiency band D or below."
+AreaEnergyPoverty,uZero_postcode_features,need_consumption_electricity_kwh_mean_postcode,"Mean energy consumption of electricity meters in apostcode in the NEED 2023 dataset (in kWh)UPDATE: Now using 2023 data instead of 2021(latest available)"
+AreaEnergyPoverty,uZero_postcode_features,need_consumption_electricity_kwh_median_postcode,"Median energy consumption of electricity meters in apostcode in the NEED 2023 dataset (in kWh)"
+AreaEnergyPoverty,uZero_postcode_features,need_consumption_electricity_kwh_total_postcode,"Standard deviation of energy consumption ofelectricity meters in a postcode in the NEED 2023dataset (in kWh)"
+AreaEnergyPoverty,uZero_postcode_features,need_num_meters_electricity_postcode,"Total number of electricity meters in a postcode inthe NEED 2023 dataset"
+AreaEnergyPoverty,uZero_postcode_features,need_consumption_gas_kwh_mean_postcode,"Mean energy consumption of gas meters in apostcode in the NEED 2023 dataset (in kWh)"
+AreaEnergyPoverty,uZero_postcode_features,need_consumption_gas_kwh_median_postcode,"Median energy consumption of gas meters in apostcode in the NEED 2023 dataset (in kWh)"
+AreaEnergyPoverty,uZero_postcode_features,need_consumption_gas_kwh_total_postcode,"Standard deviation of energy consumption of gasmeters in a postcode in the NEED 2023 dataset (inkWh)"
+AreaEnergyPoverty,uZero_postcode_features,need_num_meters_gas_postcode,"Total number of gas meters in a postcode in theNEED 2023 dataset"
+AreaEnergyPoverty,uZero_output_area_features,oa_pid,Pseudonymised Output Area
+AreaEnergyPoverty,uZero_output_area_features,ladnm,Local Authority District Name
+AreaEnergyPoverty,uZero_output_area_features,lsoa11cd,Data Zone 2011 Code
+AreaEnergyPoverty,uZero_output_area_features,fuel_poverty_score_mean_la,"The mean of fuel_poverty_score_oa over all output areas in a local authority. Header changed from ""combined_fuel_poverty_score_v3"" to ""fuel_poverty_score""."
+AreaEnergyPoverty,uZero_output_area_features,fuel_poverty_score_mean_lsoa,"The mean of fuel_poverty_score_oa over all output areas in an LSOA. Header changed from ""combined_fuel_poverty_score_v3"" to ""fuel_poverty_score""."
+AreaEnergyPoverty,uZero_output_area_features,fuel_poverty_score_oa,"A score from 0-100 predicting the relative potential benefit of home improvements in reducing fuel poverty in each census output area. The output areas likely to benefit the most (of all the areas where the score is calculated) will have a score of 100. The output areas with the least potential impact on fuel poverty will have a score of 0. The score is calculated as the min-max normalised mean value of the following features after they are standardised: percentage_uc_population_oa; energy_efficiency_c_gap_mean_oa; percentage_devices_fuel_poor_gas_smoothed_lsoa; percentage_devices_fuel_poor_electricity_smoothed_lsoa. UPDATE: percentage_uc_population_oa now uses num_uprns_oa instead of working-age population estimates. Header changed from ""combined_fuel_poverty_score_v3"" to ""fuel_poverty_score""."
+AreaEnergyPoverty,uZero_output_area_features,fuel_poverty_score_std_la,"The standard error of fuel_poverty_score_oa over all output areas in a local authority. Header changed from ""combined_fuel_poverty_score_v3"" to ""fuel_poverty_score""."
+AreaEnergyPoverty,uZero_output_area_features,fuel_poverty_score_std_lsoa,"The standard error of fuel_poverty_score_oa over all output areas in an LSOA. Header changed from ""combined_fuel_poverty_score_v3"" to ""fuel_poverty_score""."
+AreaEnergyPoverty,uZero_output_area_features,percentage_poor_epc_oa,The proportion of EPCs in an output area with a rating in band D or below.
+AreaEnergyPoverty,uZero_output_area_features,current_energy_efficiency_mean_oa,The mean of the current EPC energy efficiency scores in an output area.
+AreaEnergyPoverty,uZero_output_area_features,current_energy_efficiency_std_oa,The standard error of the current EPC energy efficiency scores in an output area.
+AreaEnergyPoverty,uZero_output_area_features,potential_energy_efficiency_mean_oa,The mean of potential EPC energy efficiency scores in an output area.
+AreaEnergyPoverty,uZero_output_area_features,potential_energy_efficiency_std_oa,The standard error of potential EPC energy efficiency scores in an output area.
+AreaEnergyPoverty,uZero_output_area_features,energy_efficiency_c_gap_mean_oa,The mean increase in EPC energy efficiency score in an output area required to either meet the households’ potential energy efficiency score or reach at least Band C.
+AreaEnergyPoverty,uZero_output_area_features,energy_efficiency_c_gap_std_oa,The standard deviation in an output area of the increase in EPC energy efficiency score required to either meet the households’ potential energy efficiency score or reach at least Band C.
+AreaEnergyPoverty,uZero_output_area_features,percentage_poor_epc_lsoa,The proportion of EPCs in an LSOA with an EPC rating in band D or below.
+AreaEnergyPoverty,uZero_output_area_features,current_energy_efficiency_mean_lsoa,The mean of current EPC energy efficiency scores for all households in an LSOA.
+AreaEnergyPoverty,uZero_output_area_features,current_energy_efficiency_std_lsoa,The standard error of the current EPC energy efficiency scores for all households in an LSOA.
+AreaEnergyPoverty,uZero_output_area_features,potential_energy_efficiency_mean_lsoa,The mean of potential EPC energy efficiency scores for all households in an LSOA.
+AreaEnergyPoverty,uZero_output_area_features,potential_energy_efficiency_std_lsoa,The standard error of potential EPC energy efficiency scores for all households in an LSOA.
+AreaEnergyPoverty,uZero_output_area_features,energy_efficiency_c_gap_mean_lsoa,The mean increase in EPC energy efficiency score in an LSOA required to either meet the households’ potential energy efficiency score or reach at least Band C.
+AreaEnergyPoverty,uZero_output_area_features,energy_efficiency_c_gap_std_lsoa,The standard deviation in an LSOA of the increase in EPC energy efficiency score required to either meet the households’ potential energy efficiency score or reach at least Band C.
+AreaEnergyPoverty,uZero_output_area_features,percentage_poor_epc_la,The proportion of EPCs in a local authority with an EPC rating in band D or below.
+AreaEnergyPoverty,uZero_output_area_features,current_energy_efficiency_mean_la,The mean of the current EPC energy efficiency scores for all households in a local authority.
+AreaEnergyPoverty,uZero_output_area_features,current_energy_efficiency_std_la,The standard error of the current EPC energy efficiency scores for all households in a local authority.
+AreaEnergyPoverty,uZero_output_area_features,potential_energy_efficiency_mean_la,The mean of potential EPC energy efficiency scores for all households in a local authority.
+AreaEnergyPoverty,uZero_output_area_features,potential_energy_efficiency_std_la,The standard error of potential EPC energy efficiency scores for all households in a local authority.
+AreaEnergyPoverty,uZero_output_area_features,energy_efficiency_c_gap_mean_la,The mean increase in EPC energy efficiency score in a local authority required to either meet the households’ potential energy efficiency score or reach at least Band C.
+AreaEnergyPoverty,uZero_output_area_features,energy_efficiency_c_gap_std_la,The standard deviation in an LSOA of the increase in EPC energy efficiency score required to either meet the households’ potential energy efficiency score or reach at least Band C.
+AreaEnergyPoverty,uZero_output_area_features,total_households_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,off_gas_grid_households_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_off_gas_grid_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,num_households_smart_prepay_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_households_smart_prepay_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,num_households_electricity_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_households_electricity_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,num_households_gas_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_households_gas_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,num_devices_clustered_electricity_lsoa,Number of electricity smart prepayment meters included in the clustering model in an LSOA.
+AreaEnergyPoverty,uZero_output_area_features,num_devices_clustered_gas_lsoa,Number of gas smart prepayment meters included in the clustering model in an LSOA.
+AreaEnergyPoverty,uZero_output_area_features,num_devices_fuel_poor_electricity_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,num_devices_fuel_poor_gas_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_devices_fuel_poor_electrictiy_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_devices_fuel_poor_gas_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,total_households_la,
+AreaEnergyPoverty,uZero_output_area_features,off_gas_grid_households_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_off_gas_grid_la,
+AreaEnergyPoverty,uZero_output_area_features,num_households_smart_prepay_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_households_smart_prepay_la,
+AreaEnergyPoverty,uZero_output_area_features,num_households_electricity_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_households_electricity_la,
+AreaEnergyPoverty,uZero_output_area_features,num_households_gas_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_households_gas_la,
+AreaEnergyPoverty,uZero_output_area_features,num_devices_clustered_electricity_la,Number of electricity smart prepayment meters included in the clustering model in a local authority.
+AreaEnergyPoverty,uZero_output_area_features,num_devices_clustered_gas_la,Number of gas smart prepayment meters included in the clustering model in a local authority.
+AreaEnergyPoverty,uZero_output_area_features,num_devices_fuel_poor_electricity_la,
+AreaEnergyPoverty,uZero_output_area_features,num_devices_fuel_poor_gas_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_devices_fuel_poor_electrictiy_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_devices_fuel_poor_gas_la,
+AreaEnergyPoverty,uZero_output_area_features,percentage_devices_fuel_poor_electricity_smoothed_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,percentage_devices_fuel_poor_gas_smoothed_lsoa,
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_1_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_2_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_3_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_4_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 4 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_5_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_6_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_7_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_8_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_9_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_10_lsoa,Number of gas smart prepayment meters in an LSOA assigned to cluster 10 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_1_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_2_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_3_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_4_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 4 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_5_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_6_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_7_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_8_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_9_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_10_lsoa,Percentage of clustered gas smart prepayment meters in an LSOA assigned to cluster 10 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_1_la,Number of gas smart prepayment meters in a local authority assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_2_la,Number of gas smart prepayment meters in a local authority assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_3_la,Number of gas smart prepayment meters in a local authority assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_fp_4_la,Number of gas smart prepayment meters in a local authority assigned to cluster 4 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_5_la,Number of gas smart prepayment meters in a local authority assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_6_la,Number of gas smart prepayment meters in a local authority assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_7_la,Number of gas smart prepayment meters in a local authority assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_8_la,Number of gas smart prepayment meters in a local authority assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_9_la,Number of gas smart prepayment meters in a local authority assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_gas_cluster_nfp_10_la,Number of gas smart prepayment meters in a local authority assigned to cluster 10 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_1_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_2_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_3_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_fp_4_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 4 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_5_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_6_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_7_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_8_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_9_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_gas_cluster_nfp_10_la,Percentage of clustered gas smart prepayment meters in a local authority assigned to cluster 10 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_1_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_2_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_3_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_4_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 4 (which is fuel poor). UPDATE: Electricity Cluster 4 is now assigned as fuel poor (header changed).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_5_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_6_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_7_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_8_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_9_lsoa,Number of electricity smart prepayment meters in an LSOA assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_1_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_2_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_3_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_4_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 4 (now fuel poor). UPDATE: Electricity Cluster 4 is now assigned as fuel poor (header changed).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_5_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_6_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_7_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_8_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_9_lsoa,Percentage of clustered electricity smart prepayment meters in an LSOA assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_1_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_2_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_3_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_fp_4_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 4 (fuel poor). UPDATE: Electricity Cluster 4 is now assigned as fuel poor (header changed).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_5_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_6_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_7_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_8_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,num_electricity_cluster_nfp_9_la,Number of electricity smart prepayment meters in a local authority assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_1_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 1 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_2_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 2 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_3_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 3 (which is fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_fp_4_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 4 (now fuel poor). UPDATE: Electricity Cluster 4 is now assigned as fuel poor (header changed).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_5_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 5 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_6_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 6 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_7_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 7 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_8_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 8 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,percentage_electricity_cluster_nfp_9_la,Percentage of clustered electricity smart prepayment meters in a local authority assigned to cluster 9 (which is not fuel poor).
+AreaEnergyPoverty,uZero_output_area_features,simd_rank_lsoa,"SIMD 2020 ranking of Scottish data zones from most deprived (ranked 1) to least deprived (ranked 6,976)."
+AreaEnergyPoverty,uZero_output_area_features,num_uc_population_la,Number of people in a local authority receiving Universal Credit.
+AreaEnergyPoverty,uZero_output_area_features,percentage_uc_population_la,Proportion of people aged 18-65 in a local authority on Universal Credit.
+AreaEnergyPoverty,uZero_output_area_features,num_uc_population_lsoa,"Number of people in an LSOA receiving Universal Credit (as of July 2025, most recent data available)."
+AreaEnergyPoverty,uZero_output_area_features,percentage_uc_population_lsoa,Number of people on Universal Credit divided by the number of domestic UPRNs in a 2011 Census LSOA. UPDATE: Now uses the number of domestic UPRNs instead of working-age population figures.
+AreaEnergyPoverty,uZero_output_area_features,num_uc_population_oa,"Number of people on Universal Credit in an OA (as of July 2025, most recent data available)."
+AreaEnergyPoverty,uZero_output_area_features,percentage_uc_population_oa,Proportion of people aged 18-65 in an OA on Universal Credit. Number of people on Universal Credit divided by the number of domestic UPRNs in a 2011 Census output area. UPDATE: Now uses the number of domestic UPRNs instead of working-age population figures.
+Environment,Climate,climate_grid_pid,This will be transformed to a wider format using the distinct values in type_of_reading
+Environment,Climate,reading_year,
+Environment,Climate,reading_month,
+Environment,Climate,type_of_reading,"Ground frost, Relative humidity, Rainfall, Surface wind speed, Snow lying on ground, Hours of sun, Temperature, Minimum temperature, Maximum temperature"
+Environment,Climate,value,
+Environment,Climate,unit_of_measure,
+Environment,Pollution,pollution_grid_pid,This will be transformed to a wider format using the distinct values in type_of_reading
+Environment,Pollution,reading_year,
+Environment,Pollution,type_of_reading,"Benzene, NO2 , NOx , Ozone, PM10, PM2.5, SO2 "
+Environment,Pollution,value,
+Environment,Pollution,unit_of_measure,
