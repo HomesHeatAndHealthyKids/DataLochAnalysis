@@ -1,5 +1,5 @@
 # Episode Builder
-There are many events that are close together. For example, hospital admissions often show multiple admissions for a single child. Events will be considered a single Episode if there is a previous event within the last 7 days. The first event date will be the date when the episode is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions, but they will be considered to be the same condition (clinical subcategory?). The diagnosis codes will be the diagnosis codes for the last discharge record. 
+There are many events that are close together. For example, hospital admissions often show multiple admissions for a single child. Events will be considered a single Episode if there is a previous event within the last 7 days. The first event date will be the date when the episode is considered to have occurred. Total Day count will be summed up for the overlapping records. Diagnosis codes will not necessarily be the same for the different admissions, but they will be considered to be the same condition. The diagnosis codes will be the diagnosis codes for the last discharge record. If a child is diagnosed in hospital, then the condition type will be assigned using the diagnosis given in hospital.
 
 **Goal**: Group events of the same patient and same condition into episodes, where any gap between consecutive events in an episode is at most max_gap_days (default 7). Episodes can be longer than 7 days; the 7 days limit applies to the gap between events, not the total episode length.
 ### Events:
@@ -9,10 +9,10 @@ There are many events that are close together. For example, hospital admissions 
  
 Episode outputs per patient + condition:
 
-**Normalisation**: Convert input tables into a single Healthcare Events table with unified schema:
+**Normalisation**: Convert input tables into a single Healthcare Episodes table with unified schema:
 * **ppid** - Unique child ID
-* **eventid** - Unique ID assigned to event
-* **condition_code** - ARI/Chronic Condition - How do we categorise this condition? Prescription does not have the fine grain details that other categories have, but are prescriptions always associated with GP Visits. Let's seee
+* **episode_id** - Unique ID assigned to Episode
+* **condition_type** - ARI/Chronic Condition - All episodes will be considered an Acute Respiratory Infection, but they may be further categorised into "Wheezing", "LRTI", "URTI", or "Acute Asthma" if diagnosed in hospital
 * **event_start_date** - date of first healthcare incident
 * **event_end_date** - end of last healthcare incident in episode
 * **num_prescriptions** - number of prescriptions used by child over all episodes
@@ -46,7 +46,7 @@ Flow chart showing how to combine hospital admissions.
 flowchart TD
 
   SMR_child_data["Go through records for each individual child and condition and sort by start date and then end date (both oldest first) "] --> C["Start at first record for this child"]
-  C --> start_episode["Start a new episode; set episode start date and admission type from current record; reset total days"]
+  C --> start_episode["Start a new episode; set episode start date and admission type from current record; set condition type to ARI; reset total days"]
   E{"Has it been more than 7 days since the previous event?"} -->|"Yes"| SMR_output_rec
   SMR_output_rec --> move_next["Is there more data for this child"]
   move_next --> |"Yes"| start_episode
@@ -69,7 +69,7 @@ flowchart TD
 
 
 
-  H --> J["Update episode with condition from this record"]
+  H --> J["Update episode with condition (phenotype_name from codelist) from this record"]
   
   J --> L{"More records for this child?"}
 
@@ -80,10 +80,10 @@ flowchart TD
   %% =========================
   %% Styling
   %% =========================
-  classDef record fill:	#C5333A,color: #ffffff,stroke: #1e8449,stroke-width:2px;
+  classDef record fill:	#C5333A,color: #ffffff,stroke: 068e01,stroke-width:2px;
   classDef data fill: #2F5F93,color: #ffffff,stroke: #7b7d7d,stroke-width:1px;
   classDef node fill: #E6C7AF,color: #000000,stroke: #7b7d7d,stroke-width:1px;
-  classDef new_data fill: #2ecc71,color: #ffffff,stroke: #7b7d7d,stroke-width:1px;
+  classDef new_data fill: #068e01,color: #ffffff,stroke: #7b7d7d,stroke-width:1px;
 
   class SMR_output_rec record
   class SMR_child_data,end_process data

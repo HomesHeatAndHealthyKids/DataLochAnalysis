@@ -183,9 +183,9 @@ flowchart TB
 
 ## Categorising GP Records
 
-We will consider multiple GP read codes on a single day to be a single event. The multiple codes may affect how a GP visit is categorised. GP Visits, prescriptions and hospital admissions will all be considered separately for the analysis.
-
-The vast majority of GP visits are categorised by a single Read code v2 value. However, like hospital admissions, GP Visits will be categorised in two ways. GP read codes do not have a hierarchy of visits so we cannot distinguish between a main code and secondary codes. First, we will test whether the visit to the GP is for an Acute Respiratory Infection. 
+- Most GP visits are recorded with a single Read v2 code. Unlike hospital admissions, GP Read codes don’t have a hierarchy, so we can’t tell whether codes are “main”  or “secondary.”
+- We’ll check whether a visit has a Read v2 code for an acute respiratory infection (ARI). However, many respiratory consultations are recorded under generic consultation codes (for example, 9N31 “Telephone encounter” or 9Na “Consultation”), with the clinical detail written in free text. Our analysis extract does not include those generic codes or the free‑text fields, so ARI visits are likely to be under‑counted if we rely on Read codes alone.
+- Because of this, we'll rely on prescriptions issued shortly after a GP visit to be a better indicator of healthcare use for respiratory infections than the Read code data.
 
 ### Acute Respiratory Infections
 ```mermaid
