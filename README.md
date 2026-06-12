@@ -11,14 +11,17 @@ The Homes, Heat, and Healthy Kids Lothians Cohort (H3K Lothian), will be establi
 We will construct a de-identified birth cohort of all children under 5 years old born in the NHS Lothian region from 01/01/2012 - 31/12/24. We will link birth records with property level energy efficiency data, hospital admissions, GP attendances, prescriptions, prepayment smart meter data, environmental and climate data. The cohort database will be held in, and accessed via, the DataLoch Trusted Research Environment.
 Descriptive statistics will be produced for the cohort over time. Multi-level models will explore the association between ARIs counts and home energy efficiency. Finally, we will develop a hidden Markov model to explore changes in the state of respiratory children‘s respiratory health with reference to the energy efficiency of their home. 
 
+Please see [Analysis Protocol](HHHK_Lothian_Database_Analysis_Protocol.pdf) for a detailed description of the analyses that will be performed.
+
 ## Github Files
 Various files relating to analysis of DataLoch data including:
-1. [Code List](code_list.csv) - lists of ICD 10 and Read V2 codes identifying different conditions
-2. [build_phenotype_lists](code_updates/building_phenotype_list.ipynb) - colab notebook used to build the codelist from HDRUK codelists - identifies codelist and any further data manipulation
-3. [analysis plan](analysis_plan.md) - graph setting out plan for analysis of DataLoch data
-4. [data linkage](linkage_plan.md) - file showing linkage of DataLoch data
-5. [healthcare process](healthcare_process.md) - file showing how a hospital admission record from SMR01 is assigned to particular categories of disease (chronic or Acute Respiratory Infection) before being combined into an extended episode
-6. [Data Dictionary](DataLoch_Data_Dictionary.csv) - file showing the tables and fields that are available in the DataLoch environment with notes
+1. [Analysis Protocol](HHHK_Lothian_Database_Analysis_Protocol.pdf) - Analysis plan for DataLoch data
+2. [Code List](code_list.csv) - lists of ICD 10 and Read V2 codes identifying different conditions
+3. [build_phenotype_lists](code_updates/building_phenotype_list.ipynb) - colab notebook used to build the codelist from HDRUK codelists - identifies codelist and any further data manipulation
+4. [analysis plan](analysis_plan.md) - graph setting out plan for analysis of DataLoch data
+5. [data linkage](linkage_plan.md) - file showing linkage of DataLoch data
+6. [healthcare process](healthcare_process.md) - file showing how a hospital admission record from SMR01 is assigned to particular categories of disease (chronic or Acute Respiratory Infection) before being combined into an extended episode
+7. [Data Dictionary](DataLoch_Data_Dictionary.csv) - file showing the tables and fields that are available in the DataLoch environment with notes
 
 ## Code_list.csv
 
