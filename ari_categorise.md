@@ -110,8 +110,13 @@ flowchart TB
     class SMR_rec record
 ```
 ### Chronic Conditions
+Each child will be listed as having one or more chronic conditions. Asthma will not be included in the list of chronic conditions. The following table will be built up per patient:
 
-Separately, an SMR01 admission record is categorised as a chronic condition using the following flowchart. The record is assigned to the phenotype name and clinical subcategory associated with the ICD10 code. This should work more as children being assigned to conditions
+**Normalisation**: Convert healthcare events to a list of chronic conditions for each child:
+* **ppid** - Unique child ID
+* **chronic_condition** - phenotype_name from chronic conditions list
+
+Separately, healthcare events are categorised as a chronic condition using the following flowchart. The record is assigned to the phenotype name and clinical subcategory associated with the ICD10 code. This should work more as children being assigned to conditions
 
 ```mermaid
 flowchart TB
@@ -119,11 +124,15 @@ flowchart TB
     %% =========================
     %% Observed Variables
     %% =========================
-    SMR_rec[SMR01 Discharge Record]
+
+    SMR_child_data["Go through records for each individual child and condition and sort by start date and then end date (both oldest first) "] --> C["Start at first record for this child"]
+    C --> |"Hospital"| SMR_rec
+    C --> |"GP"| GP_rec
+    SMR_rec[Hospital Discharge Record]
     Diag_pos_1[MAIN_CONDITION]
     Diag_pos_2[OTHER_CONDITION_1]
     Diag_pos_3[OTHER_CONDITION_2]
-    ICD10_Chronic[Chronic ICD-10 Code]
+    ICD10_Chronic["Chronic ICD-10 Code (Excl Asthma)"]
 
     %% =========================
     %% Rule Nodes (Deterministic)
@@ -133,7 +142,7 @@ flowchart TB
     %% =========================
     %% Outcomes
     %% =========================
-    Y[Count Chronic Admission]
+    Y[Add to List of Chronic Conditions for Child]
     N[Non-Chronic Admission]
 
     %% =========================
@@ -163,8 +172,41 @@ flowchart TB
 
     %% General rule applies only if not Asthma
     R_Chronic -->|Chronic Condition in Pos 1–3| Y
+
+
+    GP_rec[GP Event]
+    Diag_pos_1_GP[All GP Read Codes for a particular day]
+    Read_Chronic_GP["Chronic Read code v2 list (Excl Asthma)"]
+
+    %% =========================
+    %% Rule Nodes (Deterministic)
+    %% =========================
+    R_Chronic((Chronic Condition Rule))
+    
+    %% =========================
+    %% Outcomes
+    %% =========================
+  
+    N_GP[Non Chronic GP Visit]
+
+    %% =========================
+    %% Causal Structure
+    %% =========================
+
+    GP_rec --> Diag_pos_1_GP
+
+    %% General ARI pathway
+    Diag_pos_1_GP -->  |Any code in list| Read_Chronic_GP
+    Diag_pos_1_GP --> |Otherwise| N_GP
+
+
+    %% General ARI pathway
+    Read_Chronic_GP --> Y
+
+
    
 
+  
     %% =========================
     %% Styling
     %% =========================
@@ -175,10 +217,10 @@ flowchart TB
     classDef data fill:#E6C7AF,color:#000000,stroke:#7b7d7d,stroke-width:1px;
 
     class Y include
-    class N exclude
+    class N,N_GP exclude
     class R_Chronic rule
     class ICD10_Chronic,Diag_pos_1,Diag_pos_2,Diag_pos_3,ICD10_asthma data
-    class SMR_rec record
+    class SMR_rec,GP_rec record
 ```
 
 ## Categorising GP Records
@@ -248,63 +290,3 @@ flowchart TB
 
 If multiple GP read code v2 match ARIs on a particular day, then we will assign the ARI using the first record in the file for a particular child on a particular day. 
 
-### Chronic Conditions
-```mermaid
-flowchart TB
-
-    %% =========================
-    %% Observed Variables
-    %% =========================
-    GP_rec[GP Event]
-    Diag_pos_1[All GP Read Codes for a particular day]
-    Read_Chronic[Chronic Read code v2 list]
-
-    %% =========================
-    %% Rule Nodes (Deterministic)
-    %% =========================
-    R_Chronic((Chronic Condition Rule))
-    
-    %% =========================
-    %% Outcomes
-    %% =========================
-    Y[Count Chronic GP Visit]
-    N[Non Chronic GP Visit]
-
-    %% =========================
-    %% Causal Structure
-    %% =========================
-
-    GP_rec --> Diag_pos_1
-
-    %% General ARI pathway
-    Diag_pos_1 -->  |Any code in list| Read_Chronic
-    Diag_pos_1 --> |Otherwise| N
-
-
-    %% General ARI pathway
-    Read_Chronic --> R_Chronic
-
-
-   
-
-    %% General rule applies only if not Asthma
-    R_Chronic --> Y
-   
-
-    %% =========================
-    %% Styling
-    %% =========================
-    classDef record fill:#4E86AD,color:#ffffff,stroke:#1e8449,stroke-width:2px;
-    classDef include fill:#2ecc71,color:#ffffff,stroke:#1e8449,stroke-width:2px;
-    classDef exclude fill:#e74c3c,color:#ffffff,stroke:#922b21,stroke-width:2px;
-    classDef rule fill:#86AFC4,color:#ffffff,stroke:#1f618d,stroke-width:2px;
-    classDef data fill:#E6C7AF,color:#000000,stroke:#7b7d7d,stroke-width:1px;
-
-    class Y include
-    class N exclude
-    class R_Chronic rule
-    class ICD10_Chronic,Diag_pos_1,Read_Chronic data
-    class GP_rec record
-```
-
-If multiple GP read code v2 match Chronic conditions on a particular day, then we will assign the Chronic Condition using the first record in the file for a particular child on a particular day. 

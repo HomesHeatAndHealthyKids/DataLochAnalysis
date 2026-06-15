@@ -7,12 +7,12 @@ There are many events that are close together. For example, hospital admissions 
 *    **Prescription**: single-day event with a cost and product identifier.
 *    **Hospital admission**: multi-day event with start_date and end_date.
  
-Episode outputs per patient + condition:
+ARI Episode outputs per patient:
 
 **Normalisation**: Convert input tables into a single Healthcare Episodes table with unified schema:
 * **ppid** - Unique child ID
 * **episode_id** - Unique ID assigned to Episode
-* **condition_type** - ARI/Chronic Condition - All episodes will be considered an Acute Respiratory Infection, but they may be further categorised into "Wheezing", "LRTI", "URTI", or "Acute Asthma" if diagnosed in hospital
+* **condition_type** - ARIc Condition - All episodes will be considered an Acute Respiratory Infection, but they may be further categorised into "Wheezing", "LRTI", "URTI", or "Acute Asthma" if diagnosed in hospital
 * **event_start_date** - date of first healthcare incident
 * **event_end_date** - end of last healthcare incident in episode
 * **num_prescriptions** - number of prescriptions used by child over all episodes
@@ -22,7 +22,7 @@ Episode outputs per patient + condition:
 * **cost** - total cost of episode = cost of prescriptions + gp_visits * cost_of_gp_visit  + cost_of_hospital_per_day * num_hospital_days
 ### Key Business Rules
 
-**Partitioning**: Build episodes independently per patient_id and condition_code.
+**Partitioning**: Build episodes independently per child. For each child, produce a list of healthcare events sorted by event date. 
 
 **Gap rule**: A new event belongs to the current episode if event.start_date <= current_episode_end + max_gap_days. Otherwise, close the episode and start a new one. Default max_gap_days = 7.
 
