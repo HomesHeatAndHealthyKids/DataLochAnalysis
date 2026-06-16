@@ -125,7 +125,7 @@ flowchart TB
     %% Observed Variables
     %% =========================
 
-    SMR_child_data["Go through records for each individual child and condition and sort by start date and then end date (both oldest first) "] --> C["Start at first record for this child"]
+    SMR_child_data["Go through records for each individual child and condition and sort by start date and then end date (both oldest first) "] --> C["Review healthcare event"]
     C --> |"Hospital"| SMR_rec
     C --> |"GP"| GP_rec
     SMR_rec[Hospital Discharge Record]
@@ -134,10 +134,7 @@ flowchart TB
     Diag_pos_3[OTHER_CONDITION_2]
     ICD10_Chronic["Chronic ICD-10 Code (Excl Asthma)"]
 
-    %% =========================
-    %% Rule Nodes (Deterministic)
-    %% =========================
-    R_Chronic((Chronic Rule))
+ 
     
     %% =========================
     %% Outcomes
@@ -163,7 +160,7 @@ flowchart TB
 
 
     %% General Chronic pathway
-    ICD10_Chronic --> R_Chronic
+    ICD10_Chronic --> Y
     Diag_pos_2 --> ICD10_Chronic
     Diag_pos_3 --> ICD10_Chronic
 
@@ -171,17 +168,14 @@ flowchart TB
    
 
     %% General rule applies only if not Asthma
-    R_Chronic -->|Chronic Condition in Pos 1–3| Y
+
 
 
     GP_rec[GP Event]
     Diag_pos_1_GP[All GP Read Codes for a particular day]
     Read_Chronic_GP["Chronic Read code v2 list (Excl Asthma)"]
 
-    %% =========================
-    %% Rule Nodes (Deterministic)
-    %% =========================
-    R_Chronic((Chronic Condition Rule))
+
     
     %% =========================
     %% Outcomes
@@ -203,9 +197,12 @@ flowchart TB
     %% General ARI pathway
     Read_Chronic_GP --> Y
 
-
+    Y --> more_records["Are there more events for child?"]
+    N_GP --> more_records
+    N --> more_records
    
-
+    more_records --> |Yes| C
+    more_records --> |No| end_list["End chronic list building"]
   
     %% =========================
     %% Styling
@@ -220,7 +217,7 @@ flowchart TB
     class N,N_GP exclude
     class R_Chronic rule
     class ICD10_Chronic,Diag_pos_1,Diag_pos_2,Diag_pos_3,ICD10_asthma data
-    class SMR_rec,GP_rec record
+    class SMR_rec,GP_rec,end_list record
 ```
 
 ## Categorising GP Records
