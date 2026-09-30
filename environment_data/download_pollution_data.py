@@ -1,7 +1,8 @@
 """ 
 Download and combine UK DEFRA PCM pollution data for UK (2011–2024)
 
-Most of the code is scraping the website to find the links to the CSV files, downloading them, extracting them if they are zipped, and then combining them into a single CSV file.
+Most of the code is scraping the website to find the links to the CSV files, downloading them, extracting them if they are zipped, 
+and then combining them into a single CSV file. After combining, it filters the data to only include records from Scotland (actually latitude > 55).
 
 """
 import re
@@ -25,6 +26,9 @@ from tqdm import tqdm
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+import geopandas as gpd
+from shapely.geometry import Point
+
 # ----------------------------
 # Configuration
 # ----------------------------
@@ -32,7 +36,6 @@ BASE_URL = "https://uk-air.defra.gov.uk/data/pcm-data"
 OUTPUT_DIR = Path("defra_pcm_downloads")
 RAW_DIR = OUTPUT_DIR / "raw"
 EXTRACT_DIR = OUTPUT_DIR / "extracted"
-COMBINED_DIR = OUTPUT_DIR / "combined"
 MANIFEST_PATH = OUTPUT_DIR / "manifest.jsonl"
 
 YEARS = list(range(2011, 2025))  # inclusive 2011–2024
@@ -134,7 +137,7 @@ def guess_filename_from_cd(resp, default: str) -> str:
     return default
 
 def ensure_dirs():
-    for p in [OUTPUT_DIR, RAW_DIR, EXTRACT_DIR, COMBINED_DIR]:
+    for p in [OUTPUT_DIR, RAW_DIR, EXTRACT_DIR]:
         p.mkdir(parents=True, exist_ok=True)
 
 def is_allowed(href: str) -> bool:
@@ -604,7 +607,58 @@ def build_csvs(out_csv: Path = Path('UK_annual_pollution.csv')):
 
     logging.info("Done.")
 
+def filter_scotland(out_csv: Path = Path('UK_annual_pollution.csv'), 
+                    scotland_csv: Path = Path('scotland_annual_pollution.csv'), 
+                    scot_lat: float = 55.0):
+    # Import the filtering function from scotland_filter_pollution.py
 
+    # 1. Load the CSV file
+    # Replace 'haduk_data.csv' with your actual filename
+    df = pd.read_csv(out_csv)
+
+    # Ensure the coordinate columns are numeric and named correctly
+    # HadUK files often use 'easting' and 'northing' or similar variations
+    # Adjust column names if your CSV uses different headers (e.g., 'Easting', 'Northing')
+    easting_col = 'easting'
+    northing_col = 'northing'
+
+    # Check if columns exist (case-insensitive check helper)
+    cols_lower = [c.lower() for c in df.columns]
+    if easting_col.lower() not in cols_lower:
+        raise ValueError(f"Column '{easting_col}' not found. Available columns: {df.columns}")
+    if northing_col.lower() not in cols_lower:
+        # Find the actual case-matched name
+        easting_col = [c for c in df.columns if c.lower() == easting_col.lower()][0]
+        northing_col = [c for c in df.columns if c.lower() == northing_col.lower()][0]
+
+    # 2. Create a GeoDataFrame from the Pandas DataFrame
+    # The British National Grid uses EPSG:27700
+    geometry = [Point(xy) for xy in zip(df[easting_col], df[northing_col])]
+    gdf = gpd.GeoDataFrame(df, geometry=geometry, crs="EPSG:27700")
+
+    # 3. Reproject to WGS84 (Latitude/Longitude) - EPSG:4326
+    gdf_wgs84 = gdf.to_crs(epsg=4326)
+
+    # 4. Extract Latitude and Longitude into new columns for convenience
+    # In GeoPandas, geometry.x is Longitude and geometry.y is Latitude
+    gdf_wgs84['longitude'] = gdf_wgs84.geometry.x
+    gdf_wgs84['latitude'] = gdf_wgs84.geometry.y
+
+    # 5. Filter for Latitude > 55 (Approximate Scottish region)
+    scotland_df = gdf_wgs84[gdf_wgs84['latitude'] > scot_lat]
+
+    # Output results
+    logging.info(f"Original records: {len(df)}")
+    logging.info(f"Records in Scottish region (Lat > {scot_lat}): {len(scotland_df)}")
+
+    # Display the first few rows of the filtered data
+    logging.info("Filtered data (first 5 rows):")
+    logging.info(scotland_df.head())
+
+    # If you need to save the filtered result back to a standard CSV (without geometry object issues)
+    # We select the original columns plus the new lat/lon columns
+    output_columns = list(df.columns) + ['longitude', 'latitude']
+    scotland_df[output_columns].to_csv(scotland_csv, index=False)
 
 
 links, seen_urls = get_links()
@@ -612,3 +666,5 @@ links, seen_urls = get_links()
 download_csvs(links, seen_urls)
 
 build_csvs()
+
+filter_scotland()
