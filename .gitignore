@@ -49,3 +49,5 @@ po/*~
 rsconnect/
 
 *.docx
+environment_data/defra_pcm_downloads
+environment_data/haduk_grid_downloads
